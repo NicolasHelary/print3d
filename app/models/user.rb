@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :demands_as_client, class_name: "Demand", foreign_key: :client_id
-  has_many :offers_as_printer, class_name: "Offer", foreign_key: :printer_id
+  has_many :demands_as_client, class_name: "Demand", foreign_key: :client_id, dependent: :destroy
+  has_many :offers_as_printer, class_name: "Offer", foreign_key: :printer_id, dependent: :destroy
 
   validates :first_name, presence: true
   validates :last_name, presence: true
