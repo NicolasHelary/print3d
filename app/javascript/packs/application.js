@@ -14,3 +14,8 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+// import { animationTrololo } from "../plugins/init_dinamic"
+
+// document.addEventListener("turbolinks:load", event => {
+//   animationTrololo();
+// })
