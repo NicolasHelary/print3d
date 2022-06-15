@@ -1,3 +1,7 @@
 class Product < ApplicationRecord
   has_many :categories, through: :products_categories
+  has_many :demands
+
+  validates :name, presence: true
+  validates :description, presence: true, length: { minimum: 10 }
 end
