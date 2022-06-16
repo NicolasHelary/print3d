@@ -11,6 +11,6 @@ class DemandsController < ApplicationController
   end
 
   def demand_params
-    params.require(:demand).permit(:proposed_price, :comment, :client_id)
+    params.require(:demand).permit(:proposed_price, :comment)
   end
 end
