@@ -4,4 +4,5 @@
   <h1><% @product.name %></h1>
   <p><%= @product.description %></p>
   <i><%= @product.file3d %></i>
+  <i><% link_to "Make an Offer", to: "/demands/:id/new" %></i>
 </div>
