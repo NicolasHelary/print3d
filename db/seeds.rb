@@ -56,11 +56,29 @@ product10 = Product.create(name: "Plug cover",
 puts "Products Created !"
 
 puts "Creating Categories..."
-category1 = Category.create(name: "Sport")
-category2 = Category.create(name: "Kitchen")
-category3 = Category.create(name: "Pleasure")
-category4 = Category.create(name: "Movies Goodies")
-category5 = Category.create(name: "Statues")
+
+category1 = Category.create(name: "Animals & Pets")
+category2 = Category.create(name: "Architecture")
+category3 = Category.create(name: "Art & Abstract")
+category4 = Category.create(name: "Cars & Vehicles")
+category5 = Category.create(name: "Characters & Creatures")
+
+category6 = Category.create(name: "Cultural Heritage & History")
+category7 = Category.create(name: "Electronics & Gadgets")
+category8 = Category.create(name: "Fashion & Style")
+category9 = Category.create(name: "Food & Drink")
+category10 = Category.create(name: "Furniture & Home")
+
+category11 = Category.create(name: "Music")
+category12 = Category.create(name: "Nature & Plants")
+category13 = Category.create(name: "News & Politics")
+category14 = Category.create(name: "People")
+category15 = Category.create(name: "Places & Travel")
+
+category16 = Category.create(name: "Science & Technology")
+category17 = Category.create(name: "Sports & Fitness")
+category18 = Category.create(name: "Weapons & Military")
+
 puts "Categories Created !"
 
 puts "Creating Demands..."
