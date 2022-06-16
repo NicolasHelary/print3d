@@ -100,6 +100,21 @@ puts "Offers Created !"
 
 puts "THAT'S ALL FOLKS !!!"
 
+
+# require "open-uri"
+
+# url = ""
+# products_serialized = URI.open(url).read
+# all_products = JSON.parse(products_serialized)
+
+# all_products.each do |product|
+ # product.name
+#   product.description
+  # product.picture
+  # product.downloadlink
+# end
+# puts "#{product["name"]} - #{product["description"]}"
+
 products_categories1 = ProductCategory.create!(category: category1, product: product1)
 products_categories2 = ProductCategory.create!(category: category1, product: product2)
 products_categories3 = ProductCategory.create!(category: category1, product: product3)
