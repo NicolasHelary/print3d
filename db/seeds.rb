@@ -9,6 +9,7 @@
 puts "destroying everything"
 
 Demand.destroy_all
+ProductCategory.destroy_all
 Category.destroy_all
 Offer.destroy_all
 Product.destroy_all
@@ -98,3 +99,14 @@ offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5
 puts "Offers Created !"
 
 puts "THAT'S ALL FOLKS !!!"
+
+products_categories1 = ProductCategory.create!(category: category1, product: product1)
+products_categories2 = ProductCategory.create!(category: category1, product: product2)
+products_categories3 = ProductCategory.create!(category: category1, product: product3)
+products_categories4 = ProductCategory.create!(category: category2, product: product4)
+products_categories5 = ProductCategory.create!(category: category2, product: product5)
+products_categories6 = ProductCategory.create!(category: category2, product: product6)
+products_categories7 = ProductCategory.create!(category: category3, product: product7)
+products_categories8 = ProductCategory.create!(category: category3, product: product8)
+products_categories9 = ProductCategory.create!(category: category3, product: product9)
+products_categories10 = ProductCategory.create!(category: category3, product: product10)
