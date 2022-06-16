@@ -56,6 +56,7 @@ product10 = Product.create(name: "Plug cover",
 puts "Products Created !"
 
 puts "Creating Categories..."
+
 category1 = Category.create(name: "Animals & Pets")
 category2 = Category.create(name: "Architecture")
 category3 = Category.create(name: "Art & Abstract")

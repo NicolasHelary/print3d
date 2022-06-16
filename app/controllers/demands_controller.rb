@@ -4,7 +4,6 @@ class DemandsController < ApplicationController
     @demands = Demand.all
   end
 
-
   private
 
   def set_demand
