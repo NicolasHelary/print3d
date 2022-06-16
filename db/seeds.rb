@@ -98,3 +98,17 @@ offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5
 puts "Offers Created !"
 
 puts "THAT'S ALL FOLKS !!!"
+
+require "open-uri"
+
+url = ""
+products_serialized = URI.open(url).read
+all_products = JSON.parse(products_serialized)
+
+all_products.each do |product|
+  product.name
+  product.description
+  product.picture
+  product.downloadlink
+end
+# puts "#{product["name"]} - #{product["description"]}"
