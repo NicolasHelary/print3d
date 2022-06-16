@@ -1,0 +1,15 @@
+<h1>Show</h1>
+<br>
+<%="demande #{@demand}"%>
+<br>
+<%= "identifiant de la demande #{@demand.id}"%>
+<br>
+<%="identifiant du produit demandé #{@demand.product_id}"%>
+<br>
+<%="identifiant du client ayant fait la demande #{@demand.client.first_name}"%>
+<br>
+<%="prix proposé pour la demande #{@demand.proposed_price}"%>
+<br>
+<%="commentaire pour la demande #{@demand.comment}"%>
+<br>
+<%="Date de publication de la demande #{@demand.publication_date.to_s}"%>
