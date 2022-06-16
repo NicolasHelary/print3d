@@ -11,7 +11,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :address, presence: true
   validates :email, presence: true
-  validates :printer, presence: true
 
   validates :email, format: { with: Devise.email_regexp }
 end
