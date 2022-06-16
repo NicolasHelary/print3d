@@ -9,6 +9,7 @@
 puts "destroying everything"
 
 Demand.destroy_all
+ProductCategory.destroy_all
 Category.destroy_all
 Offer.destroy_all
 Product.destroy_all
@@ -99,16 +100,28 @@ puts "Offers Created !"
 
 puts "THAT'S ALL FOLKS !!!"
 
-require "open-uri"
 
-url = ""
-products_serialized = URI.open(url).read
-all_products = JSON.parse(products_serialized)
+# require "open-uri"
 
-all_products.each do |product|
-  product.name
-  product.description
-  product.picture
-  product.downloadlink
-end
+# url = ""
+# products_serialized = URI.open(url).read
+# all_products = JSON.parse(products_serialized)
+
+# all_products.each do |product|
+ # product.name
+#   product.description
+  # product.picture
+  # product.downloadlink
+# end
 # puts "#{product["name"]} - #{product["description"]}"
+
+products_categories1 = ProductCategory.create!(category: category1, product: product1)
+products_categories2 = ProductCategory.create!(category: category1, product: product2)
+products_categories3 = ProductCategory.create!(category: category1, product: product3)
+products_categories4 = ProductCategory.create!(category: category2, product: product4)
+products_categories5 = ProductCategory.create!(category: category2, product: product5)
+products_categories6 = ProductCategory.create!(category: category2, product: product6)
+products_categories7 = ProductCategory.create!(category: category3, product: product7)
+products_categories8 = ProductCategory.create!(category: category3, product: product8)
+products_categories9 = ProductCategory.create!(category: category3, product: product9)
+products_categories10 = ProductCategory.create!(category: category3, product: product10)
