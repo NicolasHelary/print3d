@@ -5,4 +5,8 @@ class Demand < ApplicationRecord
 
   validates :proposed_price, presence: true
   validates :comment, presence: true
+
+  def client
+    User.find(self.client_id)
+  end
 end

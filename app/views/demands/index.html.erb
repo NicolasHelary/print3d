@@ -1,7 +1,14 @@
 <div class="container">
   <h1>Demands index / home page</h1>
 
-  <%= @demands.each do |demand| %>
-    <%= demand.proposed_price %>
-  <% end %>
+  <div class="cards">
+    <% @demands.each do |demand| %>
+      <div class="card">
+        <%= demand.client.first_name %>
+        <%= demand.product.name %>
+        <%= demand.comment %>
+        <%= demand.proposed_price %>
+      </div>
+    <% end %>
+  </div>
 </div>
