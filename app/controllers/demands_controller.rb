@@ -1,8 +1,14 @@
 class DemandsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index ]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_demand, only: [:show]
+
   def index
     @demands = Demand.all
   end
+
+  def show
+  end
+
 
   private
 
@@ -13,4 +19,5 @@ class DemandsController < ApplicationController
   def demand_params
     params.require(:demand).permit(:proposed_price, :comment)
   end
+
 end
