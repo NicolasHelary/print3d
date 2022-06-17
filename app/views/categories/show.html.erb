@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><%= @category.name %></h1>
+
+  <div class="cards">
+  <% @category_product.each do |product| %>
+    <div class="card">
+    <h3><%= product.name %></h3>
+    <p><%= product.description %></p>
+    <span><%= product.file3d %></span>
+    </div>
+  <% end %>
+  </div>
+</div>
