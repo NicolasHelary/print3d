@@ -1,32 +1,49 @@
 <div class="wrapper">
- <a href="#" class="notification">
+  <a href="#" class="notification">
   <span class="badge">1</span>
-</a>
-<p><%= current_user.picture %></p>
-<p><%= current_user.first_name %></p>
-<p><%= current_user.last_name %></p>
-<p><%= current_user.email %></p>
-<p><%= current_user.address %></p>
-<p><%= current_user.printer %></p>
+  </a>
+<%# <p><%= current_user.picture %>
+  <div class="user-wrapper">
+    <div class="img-wrapper">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh-J04gXCOsTHzwjH5Ay2IWfnWBzFfBlP0sg&usqp=CAU" alt="" class="img-user">
+    </div>
+    <div class="username-block">
+      <span><%= current_user.first_name.upcase %></span>
+      <span><%= current_user.last_name.upcase %></span>
+    </div>
+    <div class="buttons-wrapper">
+      <div class="demands-count">
+        <p>Demands : <%= current_user.demands_as_client.count %></p>
+      </div>
+      <div class="offers-count">
+        <p>Offers : <%= current_user.offers_as_printer.count %></p>
+      </div>
+    </div>
+  </div>
 
-<p>Demands : <%= current_user.demands.each do |demand| %>
-<p><%= @client.first_name %></p>
-<p><%= @client.last_name %></p>
-<p><%= demand.proposed_price %></p>
-<p><%= demand.comment %></p>
-<p>Offers :  <%= current_user.offers.each do |offer| %></p>
- <p><%= @demand.client.first_name %></p>
- <p><%= @demand.client.last_name %></p>
-<p><%= offer.price %></p>
-<p><%= offer.status %></p>
+  <h2>Your demands list :</h2>
+  <div class="demands-wrapper">
+      <% current_user.demands_as_client.each do |demand| %>
+      <div class="username">
+        <p><%= current_user.first_name %></p>
+        <p><%= current_user.last_name %></p>
+      </div>
+      <p><%= demand.proposed_price %></p>
+      <p><%= demand.comment %></p>
+      <% end %>
+  </div>
 
+  <h2>Your pending offers :</h2>
+  <div class="offers-wrapper">
+      <% current_user.offers_as_printer.each do |offer| %></p>
+      <p><%= @demand.client.first_name %></p>
+      <p><%= @demand.client.last_name %></p>
+      <p><%= offer.price %></p>
+      <p><%= offer.status %></p>
+      <% end %>
+  </div>
 
-
-<h2>Your demands list :</h2>
-<%= current_user.demands.all %>
-<h2>Your pending offers :</h2>
-<%= current_user.offers.each do  %>
-<h2>Your offers accepted by Users :</h2>
+  <h2>Your offers accepted by Users :</h2>
 
 
 </div>
