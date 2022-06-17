@@ -1,0 +1,7 @@
+<h1>form</h1>
+<%= simple_form_for [@product, @demand] do |f| %>
+    <%= f.input :proposed_price, as: :integer %>
+    <%= f.input :comment, as: :text %>
+    <%= f.submit %>
+  <% end %>
+  <br>
