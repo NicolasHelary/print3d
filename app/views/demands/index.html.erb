@@ -2,12 +2,13 @@
   <h1>Demands index / home page</h1>
 
   <div class="cards">
-    <% @demands.each do |demand| %>
+    <% current_user.demands_as_client.each do |demand| %>
       <div class="card">
-        <%= demand.client.first_name %>
-        <%= demand.product.name %>
-        <%= demand.comment %>
-        <%= demand.proposed_price %>
+        <%="Cient name:  #{demand.client.first_name}" %>
+        <%= "Product #{demand.product.name}" %>
+        <%= "Comment: #{demand.comment}" %>
+        <%= "Offered price #{demand.proposed_price}" %>
+        <%= "Demand id: #{demand.id}" %>
       </div>
     <% end %>
   </div>

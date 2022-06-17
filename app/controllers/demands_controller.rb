@@ -1,6 +1,6 @@
 class DemandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :new]
-  before_action :set_demand, only: [:show]
+  before_action :set_demand, only: [:show, :edit, :update, :destroy]
 
   def index
     @demands = Demand.all
@@ -16,17 +16,33 @@ class DemandsController < ApplicationController
   end
 
   def create
-    @demand = Demand.new
-    @user = User.find(params[:user_id])
+    @demand = Demand.new(demand_params)
+    @user = current_user
     @product = Product.find(params[:product_id])
-    @demand.user = @user
+    @demand.client_id = current_user.id
     @demand.product = @product
     if @demand.save
-      redirect_to profile_path
-      flash[:alert] = "You successfully made a print demand for #{@product}"
+      redirect_to demands_path
+      flash[:alert] = "You successfully made a print demand for #{@product.name}"
     else
       render :new
     end
+  end
+
+  def edit
+    @product = Product.find(params[:product_id])
+    @client = @demand.client
+  end
+
+  def update
+    @demand.update(demand_params)
+    redirect_to product_demand_path
+  end
+
+  def destroy
+    @product = Product.find(params[:product_id])
+    @demand.destroy
+    redirect_to demands_path
   end
 
   private
