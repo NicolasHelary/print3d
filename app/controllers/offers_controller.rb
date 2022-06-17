@@ -1,19 +1,23 @@
 class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_offer, only: [:show, :edit, :update]
+  before_action :set_offer, only: [:show, :update]
 
   def new
-    @offer = Offer.new
     @demand = Demand.find(params[:demand_id])
+    @offer = Offer.new
+  end
+
+  def show
   end
 
   def create
     @offer = Offer.new(offer_params)
     @demand = Demand.find(params[:demand_id])
     @offer.demand = @demand
-    @offer.user = current_user
+    @offer.printer = current_user
     if @offer.save
-      flash[:alert] = "Send your offer"
+      flash[:alert] = "Offer sent to Client"
+      redirect_to demands_path
     else
       render :new
     end
