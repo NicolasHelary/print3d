@@ -1,0 +1,32 @@
+<div class="wrapper">
+ <a href="#" class="notification">
+  <span class="badge">1</span>
+</a>
+<p><%= current_user.picture %></p>
+<p><%= current_user.first_name %></p>
+<p><%= current_user.last_name %></p>
+<p><%= current_user.email %></p>
+<p><%= current_user.address %></p>
+<p><%= current_user.printer %></p>
+
+<p>Demands : <%= current_user.demands.each do |demand| %>
+<p><%= @client.first_name %></p>
+<p><%= @client.last_name %></p>
+<p><%= demand.proposed_price %></p>
+<p><%= demand.comment %></p>
+<p>Offers :  <%= current_user.offers.each do |offer| %></p>
+ <p><%= @demand.client.first_name %></p>
+ <p><%= @demand.client.last_name %></p>
+<p><%= offer.price %></p>
+<p><%= offer.status %></p>
+
+
+
+<h2>Your demands list :</h2>
+<%= current_user.demands.all %>
+<h2>Your pending offers :</h2>
+<%= current_user.offers.each do  %>
+<h2>Your offers accepted by Users :</h2>
+
+
+</div>

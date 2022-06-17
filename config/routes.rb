@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :products_categories, only: %i[show]
   end
   resources :categories, only: %i[show]
-
+  get "/profil", to: "pages#profil"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
