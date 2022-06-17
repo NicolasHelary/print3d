@@ -3,6 +3,7 @@
 
   <h1><% @product.name %></h1>
   <p><%= @product.description %></p>
+  <%= link_to "display current offers", offer_path(offer)  %>
   <i><%= @product.file3d %></i>
   <i><% link_to "Make an Offer", to: "/demands/:id/new" %></i>
 </div>

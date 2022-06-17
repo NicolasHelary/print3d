@@ -2,7 +2,7 @@
   <h1>Products</h1>
   <% @products.each do |product| %>
     <p>
-      <%= product.name %>
+      <%= link_to "#{product.name}", product_path(product)  %>
       <%= product.description %><% product.file3d %>
       <i class="fa-solid fa-cubes"></i>
     </p>
