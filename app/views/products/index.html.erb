@@ -1,12 +1,11 @@
-<div class="wrapper">
+<div class="product-container">
   <h1>Products</h1>
-
   <% @products.each do |product| %>
-    <%= product.name %>
-    <br>
-    <%= product.description %>
-    <br>
-    <%= product.file3d %>
-    <br>
+    <p>
+      <%= product.name %>
+      <%= product.description %><% product.file3d %>
+      <i class="fa-solid fa-cubes"></i>
+    </p>
+
   <% end %>
 </div>
