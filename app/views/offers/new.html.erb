@@ -1,0 +1,22 @@
+<h5 class="text-center mt-4">You are about to make an offer for :</h5>
+
+
+<div class="card_offer">
+  <%# <div>
+    <img src= "<%=@demand.product.file3d" > %>
+  <%# </div> %>
+
+  <p class="text-center mt-4">
+  <%=image_tag"dyson.png", height: 216, width: 296, crop: :fill %>
+  </p>
+
+  <div class="mt-4">
+    <h2><%= @demand.product.name %></h2>
+    <p><strong>Description</strong> : <%= @demand.product.description %></p>
+    <p class="fw-bold">Client Price: <%= @demand.proposed_price  %> €</p>
+  </div>
+
+</div>
+<br>
+<br>
+<%= render "form", offer:  @offer, demand: @demand %>

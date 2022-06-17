@@ -23,37 +23,48 @@ user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "105 Rue de
 user5 = User.create(first_name: "Jean Loup", email: "Jeanloup@TAdev.fr", address: "105 Rue des tickets", last_name: "five", printer: false, password: "azerty")
 puts "Users created !"
 
+link1 = "https://cdn.thingiverse.com/assets/6b/8c/69/44/3a/CanLidOpenerLid.stl"
+link2 = "https://cdn.thingiverse.com/assets/e1/78/13/5d/2d/beer_crate_18650.stl"
+link3 = "https://cdn.thingiverse.com/assets/90/8c/78/6d/5b/roller_pulley.stl"
+link4 = "https://cdn.thingiverse.com/assets/3b/ac/61/a5/bd/Klapan_1.stl"
+link5 = "https://cdn.thingiverse.com/assets/b0/e3/13/54/87/ARTICULATED_ice_dragon_fixed_p1.stl"
+link6 = "https://cdn.thingiverse.com/assets/4d/6e/1d/fc/35/103_Assembly_T-Rex_v7.stl"
+link7 = "https://cdn.thingiverse.com/assets/57/13/25/ec/71/Sponge_holder.stl"
+link8 = "https://cdn.thingiverse.com/assets/fa/1b/a2/b7/b1/Full_set_Catapult.stl"
+link9 = "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl"
+link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
+
 puts "creating products..."
 product1 = Product.create(name: "Can opener",
-                    description: "open cans easily",
-                    file3d: "https://cdn.thingiverse.com/assets/6b/8c/69/44/3a/CanLidOpenerLid.stl")
+                          description: "open cans easily",
+                          file3d: link1)
 product2 = Product.create(name: "Beer Crate",
-                    description: "to store your beers",
-                    file3d: "https://cdn.thingiverse.com/assets/e1/78/13/5d/2d/beer_crate_18650.stl")
+                          description: "to store your beers",
+                          file3d: link2)
 product3 = Product.create(name: "Disk Rack Roller",
-                    description: "replacement of upper disk",
-                    file3d: "https://cdn.thingiverse.com/assets/90/8c/78/6d/5b/roller_pulley.stl")
+                          description: "replacement of upper disk",
+                          file3d: link3)
 product4 = Product.create(name: "Air ventilation valve",
-                    description: "replacement of upper disk",
-                    file3d: "https://cdn.thingiverse.com/assets/3b/ac/61/a5/bd/Klapan_1.stl")
+                          description: "replacement of upper disk",
+                          file3d: link4)
 product5 = Product.create(name: "Ice dragon",
-                    description: "to store your beers",
-                    file3d: "https://cdn.thingiverse.com/assets/b0/e3/13/54/87/ARTICULATED_ice_dragon_fixed_p1.stl")
+                          description: "to store your beers",
+                          file3d: link5)
 product6 = Product.create(name: "T-Rex",
-                    description: "replacement of upper disk",
-                    file3d: "https://cdn.thingiverse.com/assets/4d/6e/1d/fc/35/103_Assembly_T-Rex_v7.stl")
+                          description: "replacement of upper disk",
+                          file3d: link6)
 product7 = Product.create(name: "Homer sponge holder",
-                    description: "replacement of upper disk",
-                    file3d: "https://cdn.thingiverse.com/assets/57/13/25/ec/71/Sponge_holder.stl")
+                          description: "replacement of upper disk",
+                          file3d: link7)
 product8 = Product.create(name: "Pocket catapult",
-                    description: "to store your beers",
-                    file3d: "https://cdn.thingiverse.com/assets/fa/1b/a2/b7/b1/Full_set_Catapult.stl")
+                          description: "to store your beers",
+                          file3d: link8)
 product9 = Product.create(name: "Reel Holder",
-                    description: "replacement of upper disk",
-                    file3d: "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl")
-product10 = Product.create(name: "Plug cover",
-                    description: "replacement of upper disk",
-                    file3d: "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl")
+                          description: "replacement of upper disk",
+                          file3d: link9)
+product0 = Product.create(name: "Plug cover",
+                          description: "replacement of upper disk",
+                          file3d: link10)
 puts "Products Created !"
 
 puts "Creating Categories..."
@@ -124,4 +135,4 @@ products_categories6 = ProductCategory.create!(category: category2, product: pro
 products_categories7 = ProductCategory.create!(category: category3, product: product7)
 products_categories8 = ProductCategory.create!(category: category3, product: product8)
 products_categories9 = ProductCategory.create!(category: category3, product: product9)
-products_categories10 = ProductCategory.create!(category: category3, product: product10)
+products_categories10 = ProductCategory.create!(category: category3, product: product0)
