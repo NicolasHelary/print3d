@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :products, only: %i[index show] do
     resources :demands, except: %i[index destroy]
     resources :demands, only: [:destroy], as: :delete_demand
-    resources :demands do
-      resources :offers, only: %i[new create destroy edit update]
-    end
     resources :products_categories, only: %i[show]
+  end
+  resources :demands do
+    resources :offers, only: %i[new create destroy edit update]
   end
   resources :categories, only: %i[show]
   resources :demands, only: [:index]
