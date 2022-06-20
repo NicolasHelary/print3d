@@ -1,0 +1,77 @@
+.wrapper {
+  padding: 0 10px
+}
+
+.user-wrapper {
+  border: 2px solid $blue;
+  border-radius: 12px;
+  background-color: #DBEEFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 85px;
+}
+
+.demands-wrapper {
+  border-radius: 10px;
+  background-color: #DBEEFF;
+  display: flex;
+}
+
+.offers-wrapper {
+  border-radius: 10px;
+  background-color: #DBEEFF;
+  display: flex;
+}
+.username-block {
+  display: flex;
+  column-gap: 10px;
+  padding-bottom: 16px;
+}
+
+.img-wrapper {
+  height: 75px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .img-user {
+    border: 1px solid $blue;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -75px;
+  }
+}
+
+.buttons-wrapper {
+  display: flex;
+  width: 100%;
+  border-top: 2px solid $blue;
+  .demands-count {
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid $blue;
+  }
+
+  .offers-count {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid $blue;
+  }
+}
+
+h2 {
+  margin-top: 16px;
+}
+
+.buttons-wrapper p {
+  padding-top: 10px;
+}
