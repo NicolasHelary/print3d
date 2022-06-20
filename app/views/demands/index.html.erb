@@ -1,19 +1,19 @@
-<%# <div class="container"> %>
-<div class="nav-client-printer">
-  <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
-</div>
+<div class="container">
+  <div class="nav-client-printer">
+    <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
+  </div>
 
-<h1>Demands index / home page</h1>
+  <h1>Demands index / home page</h1>
 
-<div class="cards">
-  <% current_user.demands_as_client.each do |demand| %>
-    <div class="card">
-      <%="Cient name:  #{demand.client.first_name}" %>
-      <%= "Product #{demand.product.name}" %>
-      <%= "Comment: #{demand.comment}" %>
-      <%= "Offered price #{demand.proposed_price}" %>
-      <%= "Demand id: #{demand.id}" %>
-    </div>
-  <% end %>
-</div>
+  <div class="cards">
+    <% @demands.each do |demand| %>
+      <div class="card">
+        <%="Client name:  #{demand.client.first_name}" %>
+        <%= "Product #{demand.product.name}" %>
+        <%= "Comment: #{demand.comment}" %>
+        <%= "Offered price #{demand.proposed_price}" %>
+        <%= "Demand id: #{demand.id}" %>
+      </div>
+    <% end %>
+  </div>
 </div>
