@@ -3,6 +3,25 @@
 
   <h1><% @product.name %></h1>
   <p><%= @product.description %></p>
-  <i><%= @product.file3d %></i>
-  <i><% link_to "Make an Offer", to: "/demands/:id/new" %></i>
+  <%# <i><%= @product.file3d </i>%>
+  <%# <i><%= link_to "Make a Print Demand", to: "/demands/:id/new" </i> %>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Le Form demand/new est en bas de page -->
+
+  <%= simple_form_for [@product, @demand] do |f| %>
+    <%= f.input :proposed_price, as: :integer %>
+    <%= f.input :comment, as: :text %>
+    <%= f.submit %>
+  <% end %>
+  <br>
 </div>
