@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @bg_blue = false
     @product = Product.find(params[:id])
   end
 end
