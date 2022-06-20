@@ -16,11 +16,17 @@ Product.destroy_all
 User.destroy_all
 
 puts "Creating Users..."
-user1 = User.create(first_name: "Nico", email: "nico@leaddev.fr", address: "105 Rue des gnomes", last_name: "one", printer: true, password: "azerty")
-user2 = User.create(first_name: "Tojo", email: "tojo@dev.fr", address: "105 Rue du git status", last_name: "two", printer: false, password: "azerty")
-user3 = User.create(first_name: "Romu", email: "romualdo@dev.fr", address: "105 Rue de la navbar", last_name: "three", printer: true, password: "azerty")
-user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "105 Rue des seeds", last_name: "four", printer: false, password: "azerty")
-user5 = User.create(first_name: "Jean Loup", email: "Jeanloup@TAdev.fr", address: "105 Rue des tickets", last_name: "five", printer: false, password: "azerty")
+user1 = User.create(first_name: "Nico", email: "nico@leaddev.fr", address: "17 rue Sainte, Marseille", last_name: "One", printer: true, password: "azerty")
+user2 = User.create(first_name: "Tojo", email: "tojo@dev.fr", address: "66 rue d'Aubagne, Marseille", last_name: "Two", printer: false, password: "azerty")
+user3 = User.create(first_name: "Romu", email: "romualdo@dev.fr", address: "23 rue de la République, Marseille", last_name: "Three", printer: true, password: "azerty")
+user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "3 rue des Catalans, Marseille", last_name: "Four", printer: false, password: "azerty")
+user5 = User.create(first_name: "Jean-Loup", email: "Jeanloup@TAdev.fr", address: "10 rue Pascal, Marseille", last_name: "Five", printer: false, password: "azerty")
+
+user5 = User.create(first_name: "John", email: "john@gmail.com", address: "590 avenue du Prado, Marseille", last_name: "Six", printer: false, password: "azerty")
+user5 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "29 rue de Peypagan, Aubagne", last_name: "Seven", printer: false, password: "azerty")
+user5 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "158 Bd Paul Cézanne, Gardanne", last_name: "Eight", printer: false, password: "azerty")
+user5 = User.create(first_name: "Mike", email: "mike@gmail.com", address: "13 Cr Mirabeau, 13100 Aix-en-Provence", last_name: "Nine", printer: false, password: "azerty")
+user5 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "16 Bd Victor Hugo, Nice", last_name: "Ten", printer: false, password: "azerty")
 puts "Users created !"
 
 link1 = "https://cdn.thingiverse.com/assets/6b/8c/69/44/3a/CanLidOpenerLid.stl"
