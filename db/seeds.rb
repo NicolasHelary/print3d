@@ -51,25 +51,25 @@ product3 = Product.create(name: "Disk Rack Roller",
                           description: "replacement of upper disk",
                           file3d: link3)
 product4 = Product.create(name: "Air ventilation valve",
-                          description: "replacement of upper disk",
+                          description: "replace your valve !",
                           file3d: link4)
 product5 = Product.create(name: "Ice dragon",
-                          description: "to store your beers",
+                          description: "Heard about Dragon's Ice ",
                           file3d: link5)
 product6 = Product.create(name: "T-Rex",
-                          description: "replacement of upper disk",
+                          description: "little T-rex easy to print",
                           file3d: link6)
 product7 = Product.create(name: "Homer sponge holder",
-                          description: "replacement of upper disk",
+                          description: "memest sponge holder ever",
                           file3d: link7)
 product8 = Product.create(name: "Pocket catapult",
-                          description: "to store your beers",
+                          description: "to lauch siege while drinking beer",
                           file3d: link8)
 product9 = Product.create(name: "Reel Holder",
-                          description: "replacement of upper disk",
+                          description: "Just a reel Holder",
                           file3d: link9)
 product0 = Product.create(name: "Plug cover",
-                          description: "replacement of upper disk",
+                          description: "Keep your child safe with the plug cover",
                           file3d: link10)
 puts "Products Created !"
 
