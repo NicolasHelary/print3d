@@ -1,9 +1,15 @@
-<div class="wrapper">
+<div class="nav-client">
+  <%= link_to image_tag(("print3d.PNG"), :class => "img-logo"), root_path %>
+</div>
+
+<div class="product-container">
   <h1>Products</h1>
 
   <% @products.each do |product| %>
-    <%= product.name %>
-    <%= product.description %>
-    <%= product.file3d %>
+    <p>
+      <%= product.name %>
+      <%= product.description %><% product.file3d %>
+      <i class="fa-solid fa-cubes"></i>
+    </p>
   <% end %>
 </div>

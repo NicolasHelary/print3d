@@ -1,12 +1,20 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.nav-client {
+  background-color: #ffffff;
+  vertical-align: middle;
+  text-align: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.img-logo {
+  height: 7vh;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+.img-logo-printer {
+  background-color: #070d59;
+}
+
+.nav-client-printer {
+  background-color: #070d59;
+  vertical-align: middle;
+  text-align: center;
 }

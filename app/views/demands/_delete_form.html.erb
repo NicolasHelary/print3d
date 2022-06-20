@@ -1,0 +1,6 @@
+  <%= link_to "Delete demand for #{@product.name}",
+                product_delete_demand_path(@demand.product.id , @demand),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: "btn btn-danger text-white rounded-4 shadow" %>
+</div>
