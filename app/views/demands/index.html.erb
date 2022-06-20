@@ -6,7 +6,7 @@
 <h1>Demands index / home page</h1>
 
 <div class="cards">
-  <% current_user.demands_as_client.each do |demand| %>
+  <% @demands.each do |demand| %>
     <div class="card">
       <%="Cient name:  #{demand.client.first_name}" %>
       <%= "Product #{demand.product.name}" %>
