@@ -9,7 +9,8 @@
     <p>
       <%= product.name %>
       <%= product.description %><% product.file3d %>
-      <i class="fa-solid fa-cubes"></i>
+      <br>
+      <%= link_to "See more", product_path(product), class:"product-index-links"%>
     </p>
   <% end %>
 </div>
