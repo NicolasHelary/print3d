@@ -1,6 +1,9 @@
-<div class="nav-client-printer">
-  <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
-</div>
+
+<% if user_signed_in? && current_user.printer %>
+  <%= render 'shared/navbar2' %>
+<% else %>
+  <%= render 'shared/navbar1' %>
+<% end %>
 
 <div class="wrapper">
   <%# <a href="#" class="notification">
@@ -9,7 +12,8 @@
 <%# <p><%= current_user.picture %>
   <div class="user-wrapper">
     <div class="img-wrapper">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh-J04gXCOsTHzwjH5Ay2IWfnWBzFfBlP0sg&usqp=CAU" alt="" class="img-user">
+      <%= image_tag"profile-pic.jpg", :class => "img-user", alt: "Profile Picture" %>
+      <%# <img src="../assets/images/profile-pic.jpg" alt="Profile Picture" class="img-user"> %>
     </div>
     <div class="username-block text-black">
       <span><%= current_user.first_name.upcase %></span>
