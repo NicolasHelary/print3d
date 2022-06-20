@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   has_many :demands_as_client, class_name: "Demand", foreign_key: :client_id, dependent: :destroy
   has_many :offers_as_printer, class_name: "Offer", foreign_key: :printer_id, dependent: :destroy
 
