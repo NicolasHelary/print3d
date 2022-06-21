@@ -21,6 +21,8 @@
   border-radius: 4px;
   margin-bottom: 8px;
   padding-top: 12px;
+  height: 130px;
+  overflow: hidden;
 }
 
 .offer-card {
@@ -63,9 +65,9 @@
   background-color: #DBEEFF;
 }
 .username-block {
-  display: flex;
   column-gap: 10px;
   padding-bottom: 16px;
+  text-align: center;
 }
 
 .img-wrapper {
@@ -126,6 +128,12 @@ h2 {
 .edit-user {
   margin-top: 6px;
   font-style: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-user i {
+  background-color: $light-blue;
 }
 
 a {

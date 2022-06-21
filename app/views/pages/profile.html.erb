@@ -26,18 +26,18 @@
 
   <div class="edit-user">
     <i><%= link_to "Edit your Profile", edit_user_registration_path, class: "devise-btn" %></i>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "devise-btn" %>
+    <i><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "devise-btn" %></i>
   </div>
 
   <h2>Your demands list :</h2>
   <div class="demands-wrapper">
       <% current_user.demands_as_client.each do |demand| %>
-        <%= link_to demands_path(demand), :action => 'go' do %>
+        <%= link_to demand_path(demand), :action => 'go' do %>
     <div class="demand-card">
       <div class="demand-infos">
         <p><strong>Name : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
         <p><strong>Price : </strong><%= demand.proposed_price %> €</p>
-        <p><strong>Comment : </strong><%= demand.comment %></p>
+        <p><strong>Date de publication :</strong><%=demand.publication_date%></p>
       </div>
       <img src="https://cdn.thingiverse.com/renders/d3/bb/87/6f/da/9456539fa8191e7e71a01dd18c2afe4d_preview_card.jpg" alt="">
     </div>
