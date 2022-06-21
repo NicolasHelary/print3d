@@ -5,12 +5,6 @@ class DemandsController < ApplicationController
   def index
     @demands = Demand.all
 
-    # @demands_marker = @demands.geocoded.map do |demand|
-    #     {
-    #       lat: demand.user.latitude,
-    #       lng: demand.user.longitude
-    #     }
-    # end
     @users_demand = @demands.map do |demand|
       demand.client
     end
@@ -18,7 +12,8 @@ class DemandsController < ApplicationController
     @demands_markers = @users_demand.map do |user_demand|
       {
         lat: user_demand.latitude,
-        lng: user_demand.longitude
+        lng: user_demand.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { user_demand: user_demand })
       }
     end
 
@@ -49,8 +44,8 @@ class DemandsController < ApplicationController
     @demand.client_id = current_user.id
     @demand.product = @product
     if @demand.save
-      redirect_to demands_path
       flash[:alert] = "You successfully made a print demand for #{@product.name}"
+      redirect_to demands_path
     else
       render :new
     end
