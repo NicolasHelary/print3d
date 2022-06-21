@@ -22,6 +22,11 @@ class DemandsController < ApplicationController
     end
   end
 
+  def offers
+    @demand = Demand.find(params[:demand_id])
+    @offers = @demand.offers
+  end
+
   def show
   end
 

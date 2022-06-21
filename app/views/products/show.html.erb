@@ -1,8 +1,45 @@
-<div class="wrapper">
-  <span>Print3D logo</span>
+<div class="nav-client">
+  <%= link_to image_tag(("print3d.PNG"), :class => "img-logo"), root_path %>
+</div>
 
-  <h1><% @product.name %></h1>
-  <p><%= @product.description %></p>
-  <i><%= @product.file3d %></i>
-  <i><% link_to "Make an Offer", to: "/demands/:id/new" %></i>
+<br>
+
+<div class="wrapper">
+  <div class="card-show">
+  <%# #{@product.picture} %>
+    <%= image_tag "profile-pic.jpg", class: "img-card-show", alt: "Product Pic" %>
+    <div class="card-show-infos">
+      <div>
+        <h2><%=@product.name%></h2>
+        <p><%=@product.description%></p>
+      </div>
+    </div>
+  </div>
+      <%# <h2 class="card-show-pricing">£99.99</h2> %>
+  <%# <i><%= @product.file3d </i>%>
+  <%# <i><%= link_to "Make a Print Demand", to: "/demands/:id/new" </i> %>
+
+<br>
+
+<div class="call-to-action">
+  <h5>You like this item ?</h5>
+  <h5>Make it print !</h5>
+  <i class="fa-solid fa-file-arrow-down"></i>
+</div>
+
+<br>
+
+
+
+
+
+
+  <!-- Le Form demand/new est en bas de page -->
+
+  <%= simple_form_for [@product, @demand] do |f| %>
+    <%= f.input :proposed_price, as: :integer %>
+    <%= f.input :comment, as: :text %>
+    <%= f.submit %>
+  <% end %>
+  <br>
 </div>

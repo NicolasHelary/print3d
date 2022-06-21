@@ -27,6 +27,19 @@ user7 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "29 
 user8 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "158 Bd Paul Cézanne, Gardanne", last_name: "Eight", printer: false, password: "azerty")
 user9 = User.create(first_name: "Mike", email: "mike@gmail.com", address: "13 Cr Mirabeau, 13100 Aix-en-Provence", last_name: "Nine", printer: false, password: "azerty")
 user10 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "16 Bd Victor Hugo, Nice", last_name: "Ten", printer: false, password: "azerty")
+
+user11 = User.create(first_name: "Stan", email: "stan@gmail.com", address: "2 rue Lafon, Marseille", last_name: "Smith", printer: false, password: "azerty")
+user12 = User.create(first_name: "Kevin", email: "kevin@gmail.com", address: "22 rue Paradis, Marseille", last_name: "Dupont", printer: false, password: "azerty")
+user13 = User.create(first_name: "Renée", email: "renee@gmail.com", address: "3 rue Rodolphe Pollak, Marseille", last_name: "Dupont", printer: false, password: "azerty")
+user14 = User.create(first_name: "Martin", email: "martin@gmail.com", address: "17 rue Barbaroux, Marseille", last_name: "Martin", printer: false, password: "azerty")
+user15 = User.create(first_name: "Michelle", email: "michelle@gmail.com", address: "72 rue François Moisson, Marseille", last_name: "Philippe", printer: false, password: "azerty")
+
+user16 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "73 chemin du Roucas Blanc, Marseille", last_name: "Ticolis", printer: false, password: "azerty")
+user17 = User.create(first_name: "Jean", email: "jean@gmail.com", address: "9 rue des Flots Bleus, Marseille", last_name: "Li", printer: false, password: "azerty")
+user18 = User.create(first_name: "Alain", email: "alainproviste@gmail.com", address: "161 rue du Commandant Rolland Marseille", last_name: "Proviste", printer: false, password: "azerty")
+user19 = User.create(first_name: "Alain", email: "alainprost@gmail.com", address: "28 Boulevard Barral, Marseille", last_name: "Prost", printer: false, password: "azerty")
+user20 = User.create(first_name: "Philippe", email: "philippe@gmail.com", address: "48 rue Auguste Blanqui, Marseille", last_name: "Katerine", printer: false, password: "azerty")
+user21 = User.create(first_name: "Mimi", email: "mimi@gmail.com", address: "17 Boulevard Cassini, Marseille", last_name: "Mathy", printer: false, password: "azerty")
 puts "Users created !"
 
 link1 = "https://cdn.thingiverse.com/assets/6b/8c/69/44/3a/CanLidOpenerLid.stl"
@@ -41,36 +54,18 @@ link9 = "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl"
 link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
 
 puts "creating products..."
-product1 = Product.create(name: "Can opener",
-                          description: "open cans easily",
-                          file3d: link1)
-product2 = Product.create(name: "Beer Crate",
-                          description: "to store your beers",
-                          file3d: link2)
-product3 = Product.create(name: "Disk Rack Roller",
-                          description: "replacement of upper disk",
-                          file3d: link3)
-product4 = Product.create(name: "Air ventilation valve",
-                          description: "replacement of upper disk",
-                          file3d: link4)
-product5 = Product.create(name: "Ice dragon",
-                          description: "to store your beers",
-                          file3d: link5)
-product6 = Product.create(name: "T-Rex",
-                          description: "replacement of upper disk",
-                          file3d: link6)
-product7 = Product.create(name: "Homer sponge holder",
-                          description: "replacement of upper disk",
-                          file3d: link7)
-product8 = Product.create(name: "Pocket catapult",
-                          description: "to store your beers",
-                          file3d: link8)
-product9 = Product.create(name: "Reel Holder",
-                          description: "replacement of upper disk",
-                          file3d: link9)
-product0 = Product.create(name: "Plug cover",
-                          description: "replacement of upper disk",
-                          file3d: link10)
+
+product1 = Product.create(name: "Can opener", description: "open cans easily", file3d: link1)
+product2 = Product.create(name: "Beer Crate", description: "to store your beers", file3d: link2)
+product3 = Product.create(name: "Disk Rack Roller", description: "replacement of upper disk", file3d: link3)
+product4 = Product.create(name: "Air ventilation valve", description: "replacement of upper disk", file3d: link4)
+product5 = Product.create(name: "Ice dragon", description: "to store your beers", file3d: link5)
+product6 = Product.create(name: "T-Rex", description: "replacement of upper disk", file3d: link6)
+product7 = Product.create(name: "Homer sponge holder", description: "replacement of upper disk", file3d: link7)
+product8 = Product.create(name: "Pocket catapult", description: "to store your beers", file3d: link8)
+product9 = Product.create(name: "Reel Holder", description: "replacement of upper disk", file3d: link9)
+product0 = Product.create(name: "Plug cover", description: "replacement of upper disk", file3d: link10)
+
 puts "Products Created !"
 
 puts "Creating Categories..."

@@ -1,10 +1,12 @@
 .footer-print {
   bottom: 0;
-  position: fixed;
+  //position: fixed;
+  position: sticky;
   background-color: #ceddef;
-  border-radius: 4px;
+  border-radius: 8px;
   min-width: 100vw;
   display: flex;
+  padding: 5px 0px;
 }
 
 .icons-nav {

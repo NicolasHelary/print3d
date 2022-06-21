@@ -1,0 +1,97 @@
+// Products#Index
+
+.product-index-links {
+  text-decoration: none;
+  color: black;
+}
+
+// .cards a {
+//   text-decoration: none;
+//   color: black;
+// }
+
+.product-container {
+  padding: 10px 20px;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+  border-radius: 4px;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+// Product#Show
+
+.card-show {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 0 0 4px 4px;
+}
+
+.img-card-show {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-show h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-show p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-show .card-show-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-show-infos .card-show-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.call-to-action {
+  text-align: center;
+}
