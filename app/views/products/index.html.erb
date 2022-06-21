@@ -9,7 +9,8 @@
     <% @products.each do |product| %>
       <%= link_to product_path(product), class:"product-index-links", :action => 'go' do %>
         <div class="card-product">
-          <%= image_tag "#{product.picture}", class: "img-card-product", alt: "Product Pic" %>
+        <%# , height: 216, width: 296, crop: :fill %>
+          <%= cl_image_tag product.photo.key, class: "img-card-product", alt: "Product Pic" %>
           <div class="card-product-infos">
             <h2><%= product.name %></h2>
             <p><%= product.description %></p>
