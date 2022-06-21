@@ -1,7 +1,21 @@
 .map-card{
-  border-color: rgb(202, 209, 217);
+  border-color: rgb(217, 202, 205);
+  padding-bottom: 4vh;
   border-bottom-style: solid;
   border-width: 0.1rem;
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.map-card div{
+  border-radius: 16px;
+}
+
+mapboxgl-popup {
+  max-width: 60px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
