@@ -1,6 +1,7 @@
 .footer-print {
   bottom: 0;
-  position: fixed;
+  //position: fixed;
+  position: sticky;
   background-color: #ceddef;
   border-radius: 8px;
   min-width: 100vw;

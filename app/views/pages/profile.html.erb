@@ -1,11 +1,12 @@
 <div class="wrapper">
-  <%# <a href="#" class="notification">
-  <span class="badge">1</span>
-  </a> %>
-<%# <p><%= current_user.picture %>
   <div class="user-wrapper">
     <div class="img-wrapper">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh-J04gXCOsTHzwjH5Ay2IWfnWBzFfBlP0sg&usqp=CAU" alt="" class="img-user">
+    <%# if current_user.picture %>
+      <%#= image_tag"#{current_user.picture}", :class => "img-user", alt: "Profile Picture"  %>
+    <%# else %>
+      <%= image_tag"profile-pic.jpg", :class => "img-user", alt: "Profile Picture" %>
+    <%# end %>
+
     </div>
     <div class="username-block">
       <span><%= current_user.first_name.upcase %></span>
