@@ -3,17 +3,17 @@
     <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
   </div>
   <h2>Demands list :</h2>
-  <div class="cards container">
+  <div class="cards-demand container">
     <% @demands.each do |demand| %>
       <%= link_to demand_path(demand), :action => 'go' do %>
-        <div class="card_index_demand">
+        <div class="card-index-demand">
             <%= image_tag"dyson.png"%>
-            <div class="card_index_infos">
+            <div class="card-index-infos">
               <h3><%="#{demand.product.name}" %></h3>
               <p><%="by:  #{demand.client.first_name}" %></p>
               <p><%="#{demand.comment}" %></p>
             </div>
-            <div class="card_index_price">
+            <div class="card-index-price">
               <%= "#{demand.proposed_price}€" %>
             </div>
         </div>

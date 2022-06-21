@@ -1,4 +1,4 @@
-.card_offer {
+.card-offer {
   padding: 5px;
   margin: 10px;
   border-radius: 10px;
@@ -6,7 +6,7 @@
   background: #1f3c88;
 }
 
-.cards {
+.cards-demand {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -14,19 +14,19 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards {
+  .cards-demand {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards {
+  .cards-demand {
     grid-template-columns: 1fr;
   }
 }
 
-.card_index_demand {
+.card-index-demand {
   overflow: hidden;
   height: 120px;
   background: rgb(2,0,36);
@@ -37,31 +37,31 @@
   border-radius: 8px;
 }
 
-.card_index_demand img {
+.card-index-demand img {
   height: 100%;
   width: 115px;
   object-fit: cover;
 }
 
-.card_index_demand h3 {
+.card-index-demand h3 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card_index_demand p {
+.card-index-demand p {
   font-size: 16px;
   font-weight: lighter;
   margin: 0;
 }
 
-.card_index_demand .card_index_infos {
+.card-index-demand .card-index-infos {
   padding: 10px;
   width: 100%;
   align-self: flex-start;
 }
 
-.card_index_demand .card_index_price {
+.card-index-demand .card-index-price {
   font-size: 14px;
   font-weight: bold;
   padding-right: 5px;
@@ -69,7 +69,7 @@
   align-self: flex-end;
 }
 
-.cards a {
+.cards-demand a {
   text-decoration: none;
   color: white;
 }
