@@ -10,9 +10,11 @@ class DemandsController < ApplicationController
   def offers
     @demand = Demand.find(params[:demand_id])
     @offers = @demand.offers
+
   end
 
   def show
+    @bg_blue = true
   end
 
   def new
