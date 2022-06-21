@@ -31,38 +31,44 @@
   display: flex;
   border: 1px solid $blue;
   border-radius: 4px;
-  margin-bottom: 8px;
   padding-top: 12px;
   color: #FFFFFF;
+  margin-bottom: 8px;
+  height: 130px;
+  overflow: hidden;
 }
 
 .demand-infos {
   margin-right: 6px;
   padding-left: 2px;
   width: 52%;
+  font-size: small;
 }
 
 .offer-infos {
   margin-right: 6px;
   padding-left: 2px;
   width: 52%;
+  font-size: small;
 }
 
 .demand-card img {
   height: 100%;
   width: 150px;
   object-fit: cover;
+  padding-bottom: 8px;
 }
 
 .offer-card img {
   height: 100%;
   width: 150px;
   object-fit: cover;
+  padding-bottom: 8px;
 }
 
 .offers-wrapper {
   border-radius: 10px;
-  background-color: #DBEEFF;
+  background-color: $dark-blue;
 }
 .username-block {
   column-gap: 10px;
@@ -132,8 +138,9 @@ h2 {
   justify-content: space-between;
 }
 
-.edit-user i {
+.edit-user a {
   background-color: $light-blue;
+  font-style: italic;
 }
 
 a {
