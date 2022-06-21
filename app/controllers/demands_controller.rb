@@ -4,6 +4,7 @@ class DemandsController < ApplicationController
 
   def index
     @demands = Demand.all
+    @bg_blue = true
   end
 
   def offers
