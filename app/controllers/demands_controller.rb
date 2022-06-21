@@ -49,8 +49,8 @@ class DemandsController < ApplicationController
     @demand.client_id = current_user.id
     @demand.product = @product
     if @demand.save
-      redirect_to demands_path
       flash[:alert] = "You successfully made a print demand for #{@product.name}"
+      redirect_to demands_path
     else
       render :new
     end
