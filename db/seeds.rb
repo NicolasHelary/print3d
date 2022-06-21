@@ -54,6 +54,7 @@ link9 = "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl"
 link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
 
 puts "creating products..."
+
 product1 = Product.create(name: "Can opener", description: "open cans easily", file3d: link1)
 product2 = Product.create(name: "Beer Crate", description: "to store your beers", file3d: link2)
 product3 = Product.create(name: "Disk Rack Roller", description: "replacement of upper disk", file3d: link3)
@@ -63,7 +64,8 @@ product6 = Product.create(name: "T-Rex", description: "replacement of upper disk
 product7 = Product.create(name: "Homer sponge holder", description: "replacement of upper disk", file3d: link7)
 product8 = Product.create(name: "Pocket catapult", description: "to store your beers", file3d: link8)
 product9 = Product.create(name: "Reel Holder", description: "replacement of upper disk", file3d: link9)
-product10 = Product.create(name: "Plug cover", description: "replacement of upper disk", file3d: link10)
+product0 = Product.create(name: "Plug cover", description: "replacement of upper disk", file3d: link10)
+
 puts "Products Created !"
 
 puts "Creating Categories..."

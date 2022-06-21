@@ -5,7 +5,7 @@
 .user-wrapper {
   border: 2px solid $blue;
   border-radius: 12px;
-  background-color: #DBEEFF;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,16 +13,54 @@
   margin-top: 85px;
 }
 
-.demands-wrapper {
+.demand-card {
   border-radius: 10px;
   background-color: #DBEEFF;
   display: flex;
+  border: 1px solid $blue;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding-top: 12px;
+}
+
+.offer-card {
+  border-radius: 10px;
+  background-color: #1F3C88;
+  display: flex;
+  border: 1px solid $blue;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding-top: 12px;
+  color: #FFFFFF;
+}
+
+.demand-infos {
+  margin-right: 6px;
+  padding-left: 2px;
+  width: 52%;
+}
+
+.offer-infos {
+  margin-right: 6px;
+  padding-left: 2px;
+  width: 52%;
+}
+
+.demand-card img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+}
+
+.offer-card img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
 }
 
 .offers-wrapper {
   border-radius: 10px;
   background-color: #DBEEFF;
-  display: flex;
 }
 .username-block {
   display: flex;
@@ -44,6 +82,7 @@
     border-radius: 50%;
     position: absolute;
     top: -75px;
+    object-fit: cover;
   }
 }
 
@@ -74,4 +113,22 @@ h2 {
 
 .buttons-wrapper p {
   padding-top: 10px;
+}
+
+.devise-btn {
+  border: 1px solid $blue;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  padding: 4px;
+}
+
+.edit-user {
+  margin-top: 6px;
+  font-style: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
 }
