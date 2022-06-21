@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   end
   resources :demands do
     resources :offers, only: %i[new create destroy edit update]
+    get "/offers", to: "demands#offers"
   end
   resources :categories, only: %i[show]
   get "/profile", to: "pages#profile"
-  resources :demands, only: [:index]
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
