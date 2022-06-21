@@ -1,0 +1,75 @@
+.card-offer {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #90bbd2;
+  background: #1f3c88;
+}
+
+.cards-demand {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-demand {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-demand {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-index-demand {
+  overflow: hidden;
+  height: 120px;
+  background: rgb(2,0,36);
+  background: linear-gradient(rgb(118, 152, 197) 0%, rgb(68, 103, 167) 35%, rgb(7, 77, 152) 100%);
+  box-shadow: 0 0 15px rgba(163, 189, 238, 0.2);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.card-index-demand img {
+  height: 100%;
+  width: 115px;
+  object-fit: cover;
+}
+
+.card-index-demand h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-index-demand p {
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.card-index-demand .card-index-infos {
+  padding: 10px;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.card-index-demand .card-index-price {
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  align-self: flex-end;
+}
+
+.cards-demand a {
+  text-decoration: none;
+  color: white;
+}
