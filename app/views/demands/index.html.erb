@@ -2,41 +2,35 @@
   <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
 </div>
 <div class="container">
-
-  <div class="nav-client-printer">
-    <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
-  </div>
-
-<h1>Browse demands around you</h1>
-  <div class="map-card">
-    <div style="width: 100%; height: 40vh;"
-      data-controller="mapbox"
-      data-mapbox-markers-value="<%= @demands_markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <h1>Browse demands around you</h1>
+    <div class="map-card">
+      <div style="width: 100%; height: 40vh;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @demands_markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-  </div>
 
 
-  <h2>Demands</h2>
-  <div class="cards-demand container">
-    <% @demands.each do |demand| %>
-      <%= link_to demand_path(demand), :action => 'go' do %>
-        <div class="card-index-demand">
-            <%= image_tag"dyson.png"%>
-            <div class="card-index-infos">
-              <h3><%="#{demand.product.name}" %></h3>
-              <p><%="by:  #{demand.client.first_name}" %></p>
-              <p><%="#{demand.comment}" %></p>
-            </div>
-            <div class="card-index-price">
-              <%= "#{demand.proposed_price}€" %>
-            </div>
-        </div>
+    <h2>Demands</h2>
+    <div class="cards-demand container">
+      <% @demands.each do |demand| %>
+        <%= link_to demand_path(demand), :action => 'go' do %>
+          <div class="card-index-demand">
+              <%= image_tag"dyson.png"%>
+              <div class="card-index-infos">
+                <h3><%="#{demand.product.name}" %></h3>
+                <p><%="by:  #{demand.client.first_name}" %></p>
+                <p><%="#{demand.comment}" %></p>
+              </div>
+              <div class="card-index-price">
+                <%= "#{demand.proposed_price}€" %>
+              </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
 </div>
 <br>
 <br>
 <br>
-
