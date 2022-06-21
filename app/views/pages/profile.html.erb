@@ -1,21 +1,20 @@
-
-<% if user_signed_in? && current_user.printer %>
-  <%= render 'shared/navbar2' %>
-<% else %>
-  <%= render 'shared/navbar1' %>
-<% end %>
-
 <div class="wrapper">
+  <%# <a href="#" class="notification">
+  <span class="badge">1</span>
+  </a> %>
 <%# <p><%= current_user.picture %>
   <div class="user-wrapper">
     <div class="img-wrapper">
-      <%= image_tag"profile-pic.jpg", :class => "img-user", alt: "Profile Picture" %>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh-J04gXCOsTHzwjH5Ay2IWfnWBzFfBlP0sg&usqp=CAU" alt="" class="img-user">
     </div>
-    <div class="username-block text-black">
+    <div class="username-block">
       <span><%= current_user.first_name.upcase %></span>
       <span><%= current_user.last_name.upcase %></span>
+    <div class="user-infos">
+      <span> Specialty : video </span>
     </div>
-    <div class="buttons-wrapper text-black">
+    </div>
+    <div class="buttons-wrapper">
       <div class="demands-count">
         <p>Demands : <%= current_user.demands_as_client.count %></p>
       </div>
@@ -25,29 +24,42 @@
     </div>
   </div>
 
+  <div class="edit-user">
+    <i><%= link_to "Edit your Profile", edit_user_registration_path, class: "devise-btn" %></i>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "devise-btn" %>
+  </div>
+
   <h2>Your demands list :</h2>
-  <div class="demands-wrapper text-black">
+  <div class="demands-wrapper">
       <% current_user.demands_as_client.each do |demand| %>
-      <div class="username">
-        <p><%= current_user.first_name %></p>
-        <p><%= current_user.last_name %></p>
+        <%= link_to demands_path(demand), :action => 'go' do %>
+    <div class="demand-card">
+      <div class="demand-infos">
+        <p><strong>Name : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
+        <p><strong>Price : </strong><%= demand.proposed_price %> €</p>
+        <p><strong>Comment : </strong><%= demand.comment %></p>
       </div>
-      <p><%= demand.proposed_price %></p>
-      <p><%= demand.comment %></p>
+      <img src="https://cdn.thingiverse.com/renders/d3/bb/87/6f/da/9456539fa8191e7e71a01dd18c2afe4d_preview_card.jpg" alt="">
+    </div>
+        <% end %>
       <% end %>
   </div>
 
   <h2>Your pending offers :</h2>
-  <div class="offers-wrapper text-black">
+  <div class="offers-wrapper">
       <% current_user.offers_as_printer.each do |offer| %></p>
-      <p><%= offer.demand.client.first_name %></p>
-      <p><%= offer.demand.client.last_name %></p>
-      <p><%= offer.price %></p>
-      <p><%= offer.status %></p>
-      <% end %>
+      <div class="offer-card">
+        <div class="offer-infos">
+          <p><strong>Name : </strong><%= offer.demand.client.first_name %><%= offer.demand.client.last_name %></p>
+          <p><strong>Price : </strong><%= offer.price %> €</p>
+          <p><strong>Status : </strong><%= offer.status %></p>
+        </div>
+        <img src="https://cdn.thingiverse.com/renders/d3/bb/87/6f/da/9456539fa8191e7e71a01dd18c2afe4d_preview_card.jpg" alt="">
+      </div>
+        <% end %>
   </div>
 
-  <h2>Your offers accepted by Users :</h2>
+  <%# <h2>Your offers accepted by Users :</h2> %>
 
 
 </div>
