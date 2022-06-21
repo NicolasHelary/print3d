@@ -5,6 +5,7 @@ class OffersController < ApplicationController
   def new
     @demand = Demand.find(params[:demand_id])
     @offer = Offer.new
+    @bg_blue = true
   end
 
   def show

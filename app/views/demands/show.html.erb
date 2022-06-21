@@ -1,15 +1,23 @@
-<h1>Show</h1>
+<div class="nav-client-printer">
+  <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
+</div>
 <br>
-<%="demande #{@demand}"%>
-<br>
-<%= "identifiant de la demande #{@demand.id}"%>
-<br>
-<%="identifiant du produit demandé #{@demand.product_id}"%>
-<br>
-<%="identifiant du client ayant fait la demande #{@demand.client.first_name}"%>
-<br>
-<%="prix proposé pour la demande #{@demand.proposed_price}"%>
-<br>
-<%="commentaire pour la demande #{@demand.comment}"%>
-<br>
-<%="Date de publication de la demande #{@demand.publication_date.to_s}"%>
+<h1>Show demand</h1>
+<div class="card-offer">
+
+  <p class="text-center mt-4">
+  <%=image_tag"dyson.png", height: 216, width: 296, crop: :fill %>
+  </p>
+
+  <div class="mt-4">
+    <h2><%= @demand.product.name %></h2>
+    <p><strong>Description</strong> : <%= @demand.product.description %></p>
+    <p class="fw-light">Demand by: <%= @demand.client.first_name  %></p>
+    <p class="fw-light">Comment: <%= @demand.comment  %></p>
+    <p class="fw-bold">Client Price: <%= @demand.proposed_price  %> €</p>
+  </div>
+</div>
+
+<div class="btnMakeOffer">
+  <%= link_to "Make an offer", new_demand_offer_path(@demand), class:"create"%>
+</div>

@@ -4,14 +4,36 @@ class DemandsController < ApplicationController
 
   def index
     @demands = Demand.all
+
+    # @demands_marker = @demands.geocoded.map do |demand|
+    #     {
+    #       lat: demand.user.latitude,
+    #       lng: demand.user.longitude
+    #     }
+    # end
+    @users_demand = @demands.map do |demand|
+      demand.client
+    end
+
+    @demands_markers = @users_demand.map do |user_demand|
+      {
+        lat: user_demand.latitude,
+        lng: user_demand.longitude
+      }
+    end
+
+    @bg_blue = true
+
   end
 
   def offers
     @demand = Demand.find(params[:demand_id])
     @offers = @demand.offers
+
   end
 
   def show
+    @bg_blue = true
   end
 
   def new
