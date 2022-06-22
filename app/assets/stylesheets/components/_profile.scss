@@ -15,7 +15,7 @@
 
 .demand-card {
   border-radius: 10px;
-  background-color: #DBEEFF;
+  background: linear-gradient(rgb(222, 231, 249) 0%, rgb(203, 214, 250) 35%, rgb(164, 186, 251) 100%);
   display: flex;
   border: 1px solid $blue;
   border-radius: 4px;
@@ -27,7 +27,8 @@
 
 .offer-card {
   border-radius: 10px;
-  background-color: #1F3C88;
+  background: linear-gradient(rgb(118, 152, 197) 0%, rgb(68, 103, 167) 35%, rgb(7, 77, 152) 100%);
+  box-shadow: 0 0 15px rgba(163, 189, 238, 0.2);
   display: flex;
   border: 1px solid $blue;
   border-radius: 4px;
