@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @bg_blue = false
   end
+
+  def userppvalid
+    
+  end
 end
