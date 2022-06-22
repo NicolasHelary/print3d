@@ -3,6 +3,15 @@
 }
 
 .user-wrapper {
+  span {
+    color: #070d59;
+  }
+  p {
+    color: #070d59;
+  }
+}
+
+.user-wrapper {
   border: 2px solid $blue;
   border-radius: 12px;
   background-color: #CEDDEF;
