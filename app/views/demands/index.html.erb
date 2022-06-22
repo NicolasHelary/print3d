@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <div class="nav-client-printer">
   <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
 </div>
@@ -26,6 +29,12 @@
             <div class="card-index-infos">
               <h3><%="#{demand.product.name}" %></h3>
               <p><%="by:  #{demand.client.first_name}" %></p>
+              <% demand.client.rating_as_client.times do %>
+                <span class="fa fa-star checked"></span>
+              <% end %>
+              <% (5 - demand.client.rating_as_client).times do %>
+                <span class="fa fa-star"></span>
+              <% end %>
               <p><%="#{demand.comment}" %></p>
             </div>
             <div class="card-index-price">
@@ -39,4 +48,3 @@
 <br>
 <br>
 <br>
-
