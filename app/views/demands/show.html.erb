@@ -12,9 +12,23 @@
   <div class="mt-4">
     <h2><%= @demand.product.name %></h2>
     <p><strong>Description</strong> : <%= @demand.product.description %></p>
-    <p class="fw-light">Demand by: <%= @demand.client.first_name  %></p>
-    <p class="fw-light">Comment: <%= @demand.comment  %></p>
-    <p class="fw-bold">Client Price: <%= @demand.proposed_price  %> €</p>
+    <div class="rating-users">
+      <p>
+        <div class="username">
+          <strong>By : </strong><%= @demand.client.first_name  %> <%= @demand.client.last_name %>
+        </div>
+        <div class="rating-stars">
+          <% @demand.client.rating_as_client.times do %>
+            <span class="fa fa-star checked"></span>
+          <% end %>
+          <% (5 - @demand.client.rating_as_client).times do %>
+            <span class="fa fa-star"></span>
+          <% end %>
+        </div>
+    </p>
+    </div>
+    <p><strong>Comment : </strong><%= @demand.comment  %></p>
+    <p><strong>Client Price : </strong><%= @demand.proposed_price  %> €</p>
   </div>
 </div>
 
