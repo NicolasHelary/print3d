@@ -19,3 +19,14 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+.marker-nico {
+  background-image: url('mapbox-icon.png');
+  color: red;
+  background-color: red;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}

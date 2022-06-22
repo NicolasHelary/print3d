@@ -1,0 +1,12 @@
+<div class="window-container">
+  <%#= cl_image_tag current_user.pp.key, class: "img-user", alt: "Profile Picture" %>
+   <p><%= user.first_name %></p>
+   <% user.rating_as_client.times do %>
+                <span class="fa fa-star checked"></span>
+              <% end %>
+              <% (5 - user.rating_as_client).times do %>
+                <span class="fa fa-star"></span>
+              <% end %>
+  <p><%= user.address %></p>
+  <p><%=user.printer ? "I'm a printer 😎" : "I want YOU to print my items 💪"  %> </p>
+</div>
