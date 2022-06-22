@@ -20,7 +20,11 @@
       <%= link_to product_path(product), class:"product-index-links", :action => 'go' do %>
         <div class="card-product">
         <%# , height: 216, width: 296, crop: :fill %>
+        <% if product.photo.attached? %>
           <%= cl_image_tag product.photo.key, class: "img-card-product", alt: "Product Pic" %>
+          <% else %>
+             <%= image_tag"dyson.png"%>
+          <% end %>
           <div class="card-product-infos">
             <h2><%= product.name %></h2>
             <p><%= product.description %></p>

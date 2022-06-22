@@ -11,7 +11,7 @@
 
   <div class="mt-4">
     <h2><%= @demand.product.name %></h2>
-    <p><strong>Description</strong> : <%= @demand.product.description %></p>
+    <p><strong>Description : </strong><%= @demand.product.description %></p>
     <div class="rating-users">
       <p>
         <div class="username">
@@ -33,5 +33,5 @@
 </div>
 
 <div class="btnMakeOffer">
-  <%= link_to "Make an offer", new_demand_offer_path(@demand), class:"create"%>
+  <%= link_to "Make an offer", new_demand_offer_path(@demand), class:"create" %>
 </div>
