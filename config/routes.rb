@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
   resources :categories, only: %i[show]
   get "/profile", to: "pages#profile"
+  get "/chat", to: "pages#chat"
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

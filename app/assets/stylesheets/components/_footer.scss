@@ -13,3 +13,15 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.active {
+  color: red;
+}
+
+.tabs:active {
+  color: red;
+}
+
+.tabs {
+  color: #699bf7;
+}

@@ -1,0 +1,7 @@
+<% if user_signed_in? && current_user.printer %>
+  <%= render 'shared/navbar2' %>
+<% else %>
+  <%= render 'shared/navbar1' %>
+<% end %>
+
+
