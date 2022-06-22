@@ -4,13 +4,18 @@
   <%= render 'shared/navbar1' %>
 <% end %>
 
-<h1>users</h1>
+<h1>Our community</h1>
 
 
     <div class="map-card">
       <div style="width: 100%; height: 65vh;"
         data-controller="mapbox"
         data-mapbox-markers-value="<%= @users_markers.to_json %>"
+        data-mapbox-markers-printers-value="<%= @users_printers_markers.to_json %>"
         data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
+<div class="buttons-container">
+  <button type="button" class="btn btn-light text-primary">Printers</button>
+  <button type="button" class="btn btn-light text-primary">Clients</button>
+</div>
