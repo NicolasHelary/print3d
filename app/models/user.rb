@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_many :demands_as_client, class_name: "Demand", foreign_key: :client_id, dependent: :destroy
   has_many :offers_as_printer, class_name: "Offer", foreign_key: :printer_id, dependent: :destroy
+  has_one_attached :pp
 
   validates :first_name, presence: true
   validates :last_name, presence: true
