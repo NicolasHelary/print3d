@@ -2,6 +2,16 @@
   <%= link_to image_tag(("print3d.PNG"), :class => "img-logo"), root_path %>
 </div>
 
+<div class="p-4">
+  <form class="d-flex" action="/products" accept-charset="UTF-8" method="get" style="width:100%">
+    <input type="text" name="query" id="query" value="" class="input-search" style="width:100%" placeholder="Find a product">
+    <button type="submit" name="commit" class="loupe" data-disable-with="Search">
+      <i class="fas fa-search" id="search-icon"></i>
+    </button>
+  </form>
+</div>
+
+
 <div class="product-container">
   <h4> Recently Added On Print3D</h4>
 
