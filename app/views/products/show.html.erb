@@ -6,8 +6,9 @@
 
 <div class="wrapper">
   <div class="card-show">
-  <%# #{@product.picture} %>
-    <%= image_tag "profile-pic.jpg", class: "img-card-show", alt: "Product Pic" %>
+  <%# NE PAS EFFACER %>
+  <%# , height: 216, width: 296, crop: :fill %>
+    <%= cl_image_tag product.photo.key, class: "img-card-product", alt: "Product Pic" %>
     <div class="card-show-infos">
       <div>
         <h2><%=@product.name%></h2>
@@ -41,5 +42,7 @@
     <%= f.input :comment, as: :text %>
     <%= f.submit %>
   <% end %>
-  <br>
 </div>
+<br>
+<br>
+<br>

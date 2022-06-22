@@ -5,7 +5,7 @@
 .user-wrapper {
   border: 2px solid $blue;
   border-radius: 12px;
-  background-color: #FFFFFF;
+  background-color: #CEDDEF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +21,8 @@
   border-radius: 4px;
   margin-bottom: 8px;
   padding-top: 12px;
+  height: 130px;
+  overflow: hidden;
 }
 
 .offer-card {
@@ -29,43 +31,49 @@
   display: flex;
   border: 1px solid $blue;
   border-radius: 4px;
-  margin-bottom: 8px;
   padding-top: 12px;
   color: #FFFFFF;
+  margin-bottom: 8px;
+  height: 130px;
+  overflow: hidden;
 }
 
 .demand-infos {
   margin-right: 6px;
   padding-left: 2px;
   width: 52%;
+  font-size: small;
 }
 
 .offer-infos {
   margin-right: 6px;
   padding-left: 2px;
   width: 52%;
+  font-size: small;
 }
 
 .demand-card img {
   height: 100%;
   width: 150px;
   object-fit: cover;
+  padding-bottom: 8px;
 }
 
 .offer-card img {
   height: 100%;
   width: 150px;
   object-fit: cover;
+  padding-bottom: 8px;
 }
 
 .offers-wrapper {
   border-radius: 10px;
-  background-color: #DBEEFF;
+  background-color: $dark-blue;
 }
 .username-block {
-  display: flex;
   column-gap: 10px;
   padding-bottom: 16px;
+  text-align: center;
 }
 
 .img-wrapper {
@@ -126,6 +134,13 @@ h2 {
 .edit-user {
   margin-top: 6px;
   font-style: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-user a {
+  background-color: $light-blue;
+  font-style: italic;
 }
 
 a {

@@ -1,6 +1,6 @@
 <div class="container">
   <%= simple_form_for [@demand, @offer] do |f| %>
-    <%= f.input :price, as: :float, :label => "My Price", input_html: { class: "input" }%>
+    <%= f.input :price, as: :float, :label => "My Price (€)", input_html: { class: "input" }%>
     <%= f.submit "Send Offer", :class => "create" %>
   <% end %>
 </div>
