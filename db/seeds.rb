@@ -56,17 +56,18 @@ link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
 puts "creating products..."
 
 product1 = Product.create(name: "Can opener", description: "open cans easily", file3d: link1)
-product2 = Product.create(name: "Beer Crate", description: "to store your beers", file3d: link2)
+product2 = Product.create(name: "Beer Crate Battery Holder", description: "to store your batteries", file3d: link2)
 product3 = Product.create(name: "Disk Rack Roller", description: "replacement of upper disk", file3d: link3)
-product4 = Product.create(name: "Air ventilation valve", description: "replacement of upper disk", file3d: link4)
-product5 = Product.create(name: "Ice dragon", description: "to store your beers", file3d: link5)
-product6 = Product.create(name: "T-Rex", description: "replacement of upper disk", file3d: link6)
-product7 = Product.create(name: "Homer sponge holder", description: "replacement of upper disk", file3d: link7)
-product8 = Product.create(name: "Pocket catapult", description: "to store your beers", file3d: link8)
-product9 = Product.create(name: "Reel Holder", description: "replacement of upper disk", file3d: link9)
-product0 = Product.create(name: "Plug cover", description: "replacement of upper disk", file3d: link10)
+product4 = Product.create(name: "Air ventilation valve", description: "replace your valve !", file3d: link4)
+product5 = Product.create(name: "Ice dragon", description: "Heard about Dragon's Ice", file3d: link5)
+product6 = Product.create(name: "T-Rex Skeleton", description: "little T-rex easy to print", file3d: link6)
+product7 = Product.create(name: "Homer sponge holder", description: "memest sponge holder ever", file3d: link7)
+product8 = Product.create(name: "Pocket catapult", description: "to lauch siege from your pocket", file3d: link8)
+product9 = Product.create(name: "Fishing Rod", description: "Fully Printable Fishing Rod", file3d: link9)
+product0 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
 
 puts "Products Created !"
+
 
 puts "Creating Categories..."
 
@@ -110,9 +111,6 @@ offer4 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5
 offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user1.id)
 puts "Offers Created !"
 
-puts "THAT'S ALL FOLKS !!!"
-
-
 # require "open-uri"
 
 # url = ""
@@ -120,10 +118,10 @@ puts "THAT'S ALL FOLKS !!!"
 # all_products = JSON.parse(products_serialized)
 
 # all_products.each do |product|
- # product.name
+# product.name
 #   product.description
-  # product.picture
-  # product.downloadlink
+# product.picture
+# product.downloadlink
 # end
 # puts "#{product["name"]} - #{product["description"]}"
 
@@ -137,3 +135,30 @@ products_categories7 = ProductCategory.create!(category: category3, product: pro
 products_categories8 = ProductCategory.create!(category: category3, product: product8)
 products_categories9 = ProductCategory.create!(category: category3, product: product9)
 products_categories10 = ProductCategory.create!(category: category3, product: product0)
+
+# file (uri-img):
+file1 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Can_opener_exf0kd.jpg')
+file2 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Beer_Crate_Battery_Holder_l5whll.png')
+file3 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Disk_Rack_Roller_fzcrow.jpg')
+file4 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Air_ventilation_valve_xvrkbb.jpg')
+file5 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Ice_Dragon_decukc.jpg')
+file6 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/T-Rex_Skeleton_kjo5cm.jpg')
+file7 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Homer_sponge_holder_vxj8t1.jpg')
+file8 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Pocket_catapult_azgfa5.jpg')
+file9 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Fishing_Rod_pteoxv.jpg')
+file0 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+
+# attached photo
+product1.photo.attach(io: file1, filename: 'Pocket_catapult_azgfa5', content_type: 'image/jpg')
+product2.photo.attach(io: file2, filename: 'Beer_Crate_Battery_Holder_l5whll', content_type: 'image/png')
+product3.photo.attach(io: file3, filename: 'Disk_Rack_Roller_fzcrow', content_type: 'image/jpg')
+product4.photo.attach(io: file4, filename: 'Air_ventilation_valve_xvrkbb', content_type: 'image/jpg')
+product5.photo.attach(io: file5, filename: 'Ice_Dragon_decukc', content_type: 'image/jpg')
+product6.photo.attach(io: file6, filename: 'T-Rex_Skeleton_kjo5cm', content_type: 'image/jpg')
+product7.photo.attach(io: file7, filename: 'Homer_sponge_holder_vxj8t1', content_type: 'image/jpg')
+product8.photo.attach(io: file8, filename: 'Pocket_catapult_azgfa5', content_type: 'image/png')
+product9.photo.attach(io: file9, filename: 'Fishing_Rod_pteoxv', content_type: 'image/jpg')
+product0.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+
+
+puts "THAT'S ALL FOLKS !!!"

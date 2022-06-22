@@ -1,0 +1,72 @@
+.input {
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 1px solid #90c5f4;
+  color: rgb(5, 5, 92);
+  background: #dbeeff;
+  display: block;
+  height: 36px;
+  box-shadow: 0 4px 11px 0 rgba(49, 55, 98, 0.5);
+}
+
+.input-search {
+  font-size: 14px;
+  border-radius: 4px 0 0 4px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 1px solid #90c5f4;
+  color: rgb(5, 5, 92);
+  background: #ceddef;
+  opacity: 0.5;
+  display: block;
+  height: 38px;
+  box-shadow: 0 2px 6px 0 rgba(49, 55, 98, 0.5);
+}
+
+.search-bar {
+  padding: 10px 30px;
+}
+
+.loupe {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+  height: 38px;
+  padding: 8px 20px;
+  border-radius: 0 4px 4px 0;
+  background-image: linear-gradient(180deg,#95ceff,#699bf7);
+  box-shadow: 0 2px 6px 0 rgba(49,55,98,0.5), 0 1px 3px 0 rgba(49,55,98,0.5);
+  transition: all .2s ease-out;
+  text-decoration: none;
+}
+
+.create {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  height: 38px;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg,#699bf7,#2c66d3);
+  box-shadow: 0 4px 11px 0 rgba(37,44,97,0.5), 0 1px 3px 0 rgba(37,44,97,0.5);
+  transition: all .2s ease-out;
+  text-decoration: none;
+}
+
+.btnMakeOffer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}

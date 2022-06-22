@@ -6,8 +6,9 @@
 
 <div class="wrapper">
   <div class="card-show">
-  <%# #{@product.picture} %>
-    <%= image_tag "profile-pic.jpg", class: "img-card-show", alt: "Product Pic" %>
+  <%# NE PAS EFFACER %>
+  <%# , height: 216, width: 296, crop: :fill %>
+    <%= cl_image_tag @product.photo.key, class: "img-card-product", alt: "Product Pic" %>
     <div class="card-show-infos">
       <div>
         <h2><%=@product.name%></h2>
@@ -22,7 +23,7 @@
 <br>
 
 <div class="call-to-action">
-  <h5>You like this item ?</h5>
+  <h5>You want this item ?</h5>
   <h5>Make it print !</h5>
   <i class="fa-solid fa-file-arrow-down"></i>
 </div>

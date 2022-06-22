@@ -2,6 +2,16 @@
   <%= link_to image_tag(("print3d.PNG"), :class => "img-logo"), root_path %>
 </div>
 
+<div class="search-bar">
+  <form class="d-flex" action="/products" accept-charset="UTF-8" method="get" style="width:100%">
+    <input type="text" name="query" id="query" value="" class="input-search" style="width:100%" placeholder="Find a product">
+    <button type="submit" name="commit" class="loupe" data-disable-with="Search">
+      <i class="fas fa-search" id="search-icon"></i>
+    </button>
+  </form>
+</div>
+
+
 <div class="product-container">
   <h4> Recently Added On Print3D</h4>
 
@@ -9,7 +19,8 @@
     <% @products.each do |product| %>
       <%= link_to product_path(product), class:"product-index-links", :action => 'go' do %>
         <div class="card-product">
-          <%= image_tag "#{product.picture}", class: "img-card-product", alt: "Product Pic" %>
+        <%# , height: 216, width: 296, crop: :fill %>
+          <%= cl_image_tag product.photo.key, class: "img-card-product", alt: "Product Pic" %>
           <div class="card-product-infos">
             <h2><%= product.name %></h2>
             <p><%= product.description %></p>
@@ -19,6 +30,8 @@
     <% end %>
   </div>
 </div>
+<br>
+<br>
 
 
 <%# <div class="card">
