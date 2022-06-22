@@ -7,11 +7,11 @@
 <div class="wrapper">
   <div class="user-wrapper">
     <div class="img-wrapper">
-    <%# if current_user.picture %>
-      <%#= image_tag"#{current_user.picture}", :class => "img-user", alt: "Profile Picture"  %>
-    <%# else %>
+    <% if current_user.pp.valid? %>
+      <%= cl_image_tag current_user.pp.key, class: "img-user", alt: "Profile Picture" %>
+    <% else %>
       <%= image_tag"profile-pic.jpg", :class => "img-user", alt: "Profile Picture" %>
-    <%# end %>
+    <% end %>
 
     </div>
     <div class="username-block">

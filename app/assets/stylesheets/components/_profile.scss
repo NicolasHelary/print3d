@@ -3,6 +3,15 @@
 }
 
 .user-wrapper {
+  span {
+    color: #070d59;
+  }
+  p {
+    color: #070d59;
+  }
+}
+
+.user-wrapper {
   border: 2px solid $blue;
   border-radius: 12px;
   background-color: #CEDDEF;
@@ -20,7 +29,6 @@
   border: 1px solid $blue;
   border-radius: 4px;
   margin-bottom: 8px;
-  padding-top: 12px;
   height: 130px;
   overflow: hidden;
 }
@@ -57,7 +65,7 @@
   height: 100%;
   width: 150px;
   object-fit: cover;
-  padding-bottom: 8px;
+  padding: 8px 0;
 }
 
 .offer-card img {
