@@ -7,6 +7,6 @@ class Offer < ApplicationRecord
 
   def rating_printer
     @offer = Offer.find(params[:id])
-    @ratingp = @offer.printer_score
+    @rating = @offer.printer_score
   end
 end

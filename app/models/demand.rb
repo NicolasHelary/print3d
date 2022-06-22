@@ -9,4 +9,9 @@ class Demand < ApplicationRecord
   # def client
   #   User.find(self.client_id)
   # end
+
+  def rating_client
+    @offer = Offer.find(params[:id])
+    @rating = @offer.client_score
+  end
 end

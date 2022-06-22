@@ -31,4 +31,5 @@ class User < ApplicationRecord
     ratings = offers.map(&:printer_score)
     ratings.inject { |sum, el| sum + el }.to_f / ratings.length
   end
+
 end
