@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @bg_blue = false
   end
 
+
   def users
     @users = User.all
     @users_markers = @users.geocoded.map do |user|

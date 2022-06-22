@@ -31,6 +31,12 @@
   object-fit: cover;
 }
 
+.img-card-product {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
@@ -55,7 +61,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px 4px 4px 4px;
 }
 
 .img-card-show {
@@ -75,6 +81,7 @@
   opacity: .7;
   margin: 0;
 }
+
 
 
 .card-show .card-show-infos {
