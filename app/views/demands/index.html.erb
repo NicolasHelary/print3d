@@ -21,7 +21,9 @@
             <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
             <div class="card-index-infos">
               <h3><%="#{demand.product.name}" %></h3>
-              <p><%="by:  #{demand.client.first_name}" %></p>
+              <p><%="by :  #{demand.client.first_name}" %></p>
+
+
               <% demand.client.rating_as_client.times do %>
                 <span class="fa fa-star checked"></span>
               <% end %>
