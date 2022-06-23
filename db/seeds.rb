@@ -58,7 +58,7 @@ user15 = User.create(first_name: "Michelle", email: "michelle@gmail.com", addres
 
 user16 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "73 chemin du Roucas Blanc, Marseille", bio: bio16, last_name: "Ticolis", printer: false, password: "azerty")
 user17 = User.create(first_name: "Jean", email: "jean@gmail.com", address: "9 rue des Flots Bleus, Marseille", bio: bio17, last_name: "Li", printer: false, password: "azerty")
-user18 = User.create(first_name: "Alain", email: "alainproviste@gmail.com", address: "161 rue du Commandant Rolland Marseille", bio: bio18, last_name: "Proviste", printer: false, password: "azerty")
+user18 = User.create(first_name: "Alain", email: "alainproviste@gmail.com", address: "161 rue du Commandant Rolland Marseille", bio: bio18, last_name: "Proviste", printer: true, password: "azerty")
 user19 = User.create(first_name: "Alain", email: "alainprost@gmail.com", address: "28 Boulevard Barral, Marseille", bio: bio19, last_name: "Prost", printer: false, password: "azerty")
 user20 = User.create(first_name: "Philippe", email: "philippe@gmail.com", address: "48 rue Auguste Blanqui, Marseille", bio: bio20, last_name: "Katerine", printer: false, password: "azerty")
 user21 = User.create(first_name: "Mimi", email: "mimi@gmail.com", address: " 22 rue d'Aubagne, Marseille", bio: bio21, last_name: "Mathy", printer: false, password: "azerty")
@@ -199,12 +199,12 @@ offer3 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5
 offer4 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user7.id)
 offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user7.id)
 
-offer6 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand9.id, printer_id: user8.id)
-offer7 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand12.id, printer_id: user11.id)
-offer8 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand14.id, printer_id: user13.id)
-offer9 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand16.id, printer_id: user18.id)
-offer10 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand20.id, printer_id: user17.id)
-offer11 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand20.id, printer_id: user21.id)
+offer6 = Offer.create(price: 15.00, status: 1, client_score: 1, printer_score: 4, demand_id: demand9.id, printer_id: user8.id)
+offer7 = Offer.create(price: 15.00, status: 1, client_score: 3, printer_score: 2, demand_id: demand12.id, printer_id: user11.id)
+offer8 = Offer.create(price: 15.00, status: 1, client_score: 2, printer_score: 3, demand_id: demand14.id, printer_id: user13.id)
+offer9 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 4, demand_id: demand16.id, printer_id: user18.id)
+offer10 = Offer.create(price: 15.00, status: 1, client_score: 1, printer_score: 5, demand_id: demand20.id, printer_id: user17.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 4, printer_score: 3, demand_id: demand20.id, printer_id: user21.id)
 puts "Offers Created !"
 
 # require "open-uri"
