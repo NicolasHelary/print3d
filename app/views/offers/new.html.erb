@@ -22,7 +22,7 @@
 <br>
 <div class="container">
   <%= simple_form_for [@demand, @offer] do |f| %>
-    <%= f.input :printer_score, as: :string, :label => "Client comment: #{@demand.comment}", input_html: { class: "input" }, :placeholder => "your response"%>
+    <%= f.input :comment, as: :string, :label => "Client comment: #{@demand.comment}", input_html: { class: "input" }, :placeholder => "your response"%>
   <% end %>
 </div>
 <%= render "form", offer:  @offer, demand: @demand %>
