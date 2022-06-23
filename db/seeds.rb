@@ -61,7 +61,7 @@ user17 = User.create(first_name: "Jean", email: "jean@gmail.com", address: "9 ru
 user18 = User.create(first_name: "Alain", email: "alainproviste@gmail.com", address: "161 rue du Commandant Rolland Marseille", bio: bio18, last_name: "Proviste", printer: false, password: "azerty")
 user19 = User.create(first_name: "Alain", email: "alainprost@gmail.com", address: "28 Boulevard Barral, Marseille", bio: bio19, last_name: "Prost", printer: false, password: "azerty")
 user20 = User.create(first_name: "Philippe", email: "philippe@gmail.com", address: "48 rue Auguste Blanqui, Marseille", bio: bio20, last_name: "Katerine", printer: false, password: "azerty")
-user21 = User.create(first_name: "Mimi", email: "mimi@gmail.com", address: "17 Boulevard Cassini, Marseille", bio: bio21, last_name: "Mathy", printer: false, password: "azerty")
+user21 = User.create(first_name: "Mimi", email: "mimi@gmail.com", address: " 22 rue d'Aubagne, Marseille", bio: bio21, last_name: "Mathy", printer: false, password: "azerty")
 puts "Users created !"
 
 link1 = "https://cdn.thingiverse.com/assets/6b/8c/69/44/3a/CanLidOpenerLid.stl"
@@ -97,7 +97,7 @@ product7 = Product.create(name: "Homer sponge holder", description: "memest spon
 product8 = Product.create(name: "Pocket catapult", description: "to lauch siege from your pocket", file3d: link8)
 product9 = Product.create(name: "Fishing Rod", description: "Fully Printable Fishing Rod", file3d: link9)
 product0 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product11 = Product.create(name: "Big Gears", description: "These cogs are meant for decorative custom cog work", file3d: link11)
+product11 = Product.create(name: "Eheim pump gears", description: "These cogs are meant for decorative custom cog work", file3d: link11)
 product12 = Product.create(name: "Razor holder", description: "Useful to store your disposable razor. ", file3d: link12)
 product13 = Product.create(name: "Spaghetti portioner", description: "Simple design of a spaghetti measuring tool. ", file3d: link13)
 product14 = Product.create(name: "Japanese Lantern", description: "Panels have thin transparent back rather than using the Tea Light Cover", file3d: link14)
@@ -198,6 +198,13 @@ offer2 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5
 offer3 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
 offer4 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user7.id)
 offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user7.id)
+
+offer6 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand9.id, printer_id: user8.id)
+offer7 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand12.id, printer_id: user11.id)
+offer8 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand14.id, printer_id: user13.id)
+offer9 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand16.id, printer_id: user18.id)
+offer10 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand20.id, printer_id: user17.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: rand(2...5), printer_score: rand(2...5), demand_id: demand20.id, printer_id: user21.id)
 puts "Offers Created !"
 
 # require "open-uri"
