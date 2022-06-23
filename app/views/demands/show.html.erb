@@ -11,8 +11,8 @@
 
   <div class="mt-4">
     <h2><%= @demand.product.name %></h2>
-    <p><strong>Description</strong> : <%= @demand.product.description %></p>
-    <p class="fw-light">Demand by: <%= @demand.client.first_name  %></p>
+    <p><strong>Product description</strong> : <%= @demand.product.description %></p>
+    <p class="fw-light">Client: <%= @demand.client.first_name  %></p>
     <p class="fw-light">Comment: <%= @demand.comment  %></p>
     <p class="fw-bold">Client Price: <%= @demand.proposed_price  %> €</p>
   </div>

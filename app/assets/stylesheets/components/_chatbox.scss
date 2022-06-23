@@ -1,6 +1,51 @@
 .chatbox {
   border: 2px solid;
   background-color: $light-gray;
-  height: 40vh;
+  height: 45vh;
   width: 100%;
+  //display: flex;
+}
+
+.chatter1 h6 {
+  color: red;
+  font-size: 16px;
+  margin: 0;
+}
+
+.chatter1 span {
+  color: black;
+  font-size: 18px;
+}
+
+.chatter2 h6 {
+  color: coral;
+  font-size: 16px;
+  margin: 0;
+}
+
+.chatter2 span {
+  color: black;
+  font-size: 18px;
+}
+
+.chatter3 h6 {
+  color: darkblue;
+  font-size: 16px;
+  margin: 0;
+}
+
+.chatter3 span {
+  color: black;
+  font-size: 18px;
+}
+
+.chatter4 h6 {
+  color:deeppink;
+  font-size: 16px;
+  margin: 0;
+}
+
+.chatter4 span {
+  color: black;
+  font-size: 18px;
 }
