@@ -1,8 +1,8 @@
 <div class="nav-client-printer">
   <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
 </div>
-<br>
-<h5 class="text-center">Your demand :</h5>
+
+
 <div class="card-offer">
 
   <div class="text-center mt-4">
@@ -18,6 +18,21 @@
   </div>
 </div>
 
+
+
+<% if current_user.id == @demand.client_id %>
+  <div class="btn-delete-demand  demands-access-btn">
+    <%= link_to "Delete demand",
+                  product_delete_demand_path(@demand.product.id, @demand),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" },
+                  class: "btn create" %>
+  </div>
+<% else %>
 <div class="btnMakeOffer">
   <%= link_to "Make an offer", new_demand_offer_path(@demand), class:"create"%>
 </div>
+<% end %>
+<br>
+<br>
+<br>
