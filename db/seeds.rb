@@ -23,7 +23,7 @@ user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "3 rue des 
 user5 = User.create(first_name: "Jean-Loup", email: "Jeanloup@TAdev.fr", address: "10 rue Pascal, Marseille", last_name: "Five", printer: false, password: "azerty")
 
 user6 = User.create(first_name: "John", email: "john@gmail.com", address: "590 avenue du Prado, Marseille", last_name: "Six", printer: false, password: "azerty")
-user7 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "29 rue de Peypagan, Aubagne", last_name: "Seven", printer: false, password: "azerty")
+user7 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "29 rue de Peypagan, Aubagne", last_name: "Seven", printer: true, password: "azerty")
 user8 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "158 Bd Paul Cézanne, Gardanne", last_name: "Eight", printer: false, password: "azerty")
 user9 = User.create(first_name: "Mike", email: "mike@gmail.com", address: "13 Cr Mirabeau, 13100 Aix-en-Provence", last_name: "Nine", printer: false, password: "azerty")
 user10 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "16 place Victor Hugo, Marseille", last_name: "Ten", printer: false, password: "azerty")
