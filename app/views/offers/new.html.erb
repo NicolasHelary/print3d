@@ -9,7 +9,7 @@
 <div class="card-offer">
 
   <p class="text-center mt-4">
-  <%=image_tag"dyson.png", height: 216, width: 296, crop: :fill %>
+    <%= cl_image_tag @demand.product.photo.key, class: "img-show", alt: "Product Pic" %>
   </p>
 
   <div class="mt-4">
@@ -20,7 +20,11 @@
 
 </div>
 <br>
-<br>
+<div class="container">
+  <%= simple_form_for [@demand, @offer] do |f| %>
+    <%= f.input :printer_score, as: :string, :label => "Client comment: #{@demand.comment}", input_html: { class: "input" }, :placeholder => "your response"%>
+  <% end %>
+</div>
 <%= render "form", offer:  @offer, demand: @demand %>
 <br>
 <br>
