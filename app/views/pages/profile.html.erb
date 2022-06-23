@@ -32,33 +32,32 @@
   </div>
 
   <div class="edit-user">
-    <%= link_to "Edit your Profile", edit_user_registration_path, class: "devise-btn" %>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "devise-btn" %>
+    <%= link_to "Edit your Password", edit_user_registration_path, class: "create" %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "create" %>
   </div>
 
-
-  <h2>Your demands list :</h2>
+  <h2>You have <%= current_user.demands_as_client.count %> demand<%=(current_user.demands_as_client.count <= 1 ? '' : 's')%> :</h2>
   <div class="demands-wrapper">
       <% current_user.demands_as_client.each do |demand| %>
         <%= link_to demand_path(demand), :action => 'go' do %>
-    <div class="demand-card">
-      <div class="demand-infos">
-        <p><strong>Name : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
-        <p><strong>Price : </strong><%= demand.proposed_price %> €</p>
-        <p><strong>Date de publication :</strong><%=demand.publication_date%></p>
-      </div>
-      <img src="https://cdn.thingiverse.com/renders/d3/bb/87/6f/da/9456539fa8191e7e71a01dd18c2afe4d_preview_card.jpg" alt="">
-    </div>
+          <div class="demand-card">
+            <div class="demand-infos">
+              <p><strong>Name : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
+              <p><strong>Price : </strong><%= demand.proposed_price %> €</p>
+              <p><strong>Date de publication :</strong><%=demand.publication_date.to_i%></p>
+            </div>
+            <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
+          </div>
         <% end %>
       <% end %>
   </div>
 
-  <h2>Your pending offers :</h2>
+  <h2>You have <%= current_user.offers_as_printer.count %> offer<%=(current_user.offers_as_printer.count <= 1 ? '' : 's')%> :</h2>
   <div class="offers-wrapper">
       <% current_user.offers_as_printer.each do |offer| %></p>
           <div class="offer-card">
           <div class="offer-infos">
-          <p><strong>Name : </strong><%= offer.demand.client.first_name %><%= offer.demand.client.last_name %></p>
+          <p><strong>Name : </strong><%= offer.demand.client.first_name %> <%= offer.demand.client.last_name %></p>
           <p><strong>Price : </strong><%= offer.price %> €</p>
             <% if offer.status == 1 %>
               <p><strong>Status :</strong> Pending</p>
@@ -68,9 +67,9 @@
               <p><strong>Status :</strong> Rejected</p>
             <% end %>
           </div>
-        <img src="https://cdn.thingiverse.com/renders/d3/bb/87/6f/da/9456539fa8191e7e71a01dd18c2afe4d_preview_card.jpg" alt="">
+          <%= cl_image_tag offer.demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
           </div>
-        <% end %>
+      <% end %>
   </div>
   <%# <h2>Your offers accepted by Users :</h2> %>
 </div>

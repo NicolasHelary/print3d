@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 <div class="nav-client-printer">
   <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
 </div>
@@ -21,7 +18,7 @@
     <% @demands.each do |demand| %>
       <%= link_to demand_path(demand), :action => 'go' do %>
         <div class="card-index-demand">
-            <%= image_tag"dyson.png"%>
+            <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
             <div class="card-index-infos">
               <h3><%="#{demand.product.name}" %></h3>
               <p><%="by:  #{demand.client.first_name}" %></p>
