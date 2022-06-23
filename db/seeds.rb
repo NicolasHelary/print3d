@@ -74,7 +74,7 @@ link7 = "https://cdn.thingiverse.com/assets/57/13/25/ec/71/Sponge_holder.stl"
 link8 = "https://cdn.thingiverse.com/assets/fa/1b/a2/b7/b1/Full_set_Catapult.stl"
 link9 = "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl"
 link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
-link11 = "https://cdn.thingiverse.com/assets/e2/62/ab/bc/46/card_preview_20200701_103753.jpg"
+link11 = "https://cdn.thingiverse.com/assets/6e/64/f3/3e/df/Z15M9Sp3.stl"
 link12 = "https://cdn.thingiverse.com/assets/28/33/b6/b7/6c/card_preview_With_razors.PNG"
 link13 = "https://cdn.thingiverse.com/assets/a6/b1/01/32/9c/card_preview_IMG_20220524_133209.jpg"
 link14 = "https://cdn.thingiverse.com/assets/d7/58/25/91/b5/card_preview_IMG_7249.jpg"
@@ -230,17 +230,7 @@ file7 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/
 file8 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Pocket_catapult_azgfa5.jpg')
 file9 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Fishing_Rod_pteoxv.jpg')
 file0 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file11 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file12 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file13 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file14 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file15 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file16 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file17 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file18 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file19 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file20 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
-file21 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file11 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655978195/card_preview_20200701_103753_r5c1lp.jpg')
 
 # attached photo
 product1.photo.attach(io: file1, filename: 'Pocket_catapult_azgfa5', content_type: 'image/jpg')
@@ -253,17 +243,6 @@ product7.photo.attach(io: file7, filename: 'Homer_sponge_holder_vxj8t1', content
 product8.photo.attach(io: file8, filename: 'Pocket_catapult_azgfa5', content_type: 'image/png')
 product9.photo.attach(io: file9, filename: 'Fishing_Rod_pteoxv', content_type: 'image/jpg')
 product0.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product11.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product12.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product13.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product14.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product15.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product16.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product17.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product18.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product19.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product20.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product21.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
 
 user_pic1 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655891928/print3d/nicolas_l8hk0y.jpg')
 user_pic2 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655889461/print3d/griffin_lwgesx.jpg')
