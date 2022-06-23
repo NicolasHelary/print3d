@@ -48,9 +48,9 @@
             <%= link_to demand_path(demand), :action => 'go' do %>
               <div class="demand-card">
                 <div class="demand-infos">
-                  <p><strong>Client : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
-                  <p><strong>Price offered : </strong><%= demand.proposed_price %> €</p>
-                  <p><strong>Publication date : </strong><%=demand.created_at.to_time.strftime('%B %e at %l:%M')%></p>
+                  <p><strong>Client: </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
+                  <p><strong>Price offered: </strong><%= demand.proposed_price %> €</p>
+                  <p><strong>Published on : </strong><%=demand.created_at.to_time.strftime('%B %e at %l:%M')%></p>
                 </div>
                 <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
               </div>
