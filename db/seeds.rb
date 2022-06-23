@@ -75,13 +75,18 @@ link8 = "https://cdn.thingiverse.com/assets/fa/1b/a2/b7/b1/Full_set_Catapult.stl
 link9 = "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl"
 link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
 link11 = "https://cdn.thingiverse.com/assets/6e/64/f3/3e/df/Z15M9Sp3.stl"
-link12 = "https://cdn.thingiverse.com/assets/28/33/b6/b7/6c/card_preview_With_razors.PNG"
-link13 = "https://cdn.thingiverse.com/assets/a6/b1/01/32/9c/card_preview_IMG_20220524_133209.jpg"
-link14 = "https://cdn.thingiverse.com/assets/d7/58/25/91/b5/card_preview_IMG_7249.jpg"
-link15 =
+link12 = "https://cdn.thingiverse.com/assets/2f/d7/e8/ba/4b/v2_Razor_Holder.stl"
+link13 = "https://cdn.thingiverse.com/assets/86/02/13/7e/b0/spaghetti_tool.STL"
+link14 = "https://cdn.thingiverse.com/assets/1b/d9/fe/f0/72/Panel_Gate_Back.stl"
+link15 = "https://cdn.thingiverse.com/assets/2b/9b/d3/1f/a4/Casing.stl"
+link16 = "https://cdn.thingiverse.com/assets/c2/d5/71/b0/35/boat_impeller_housing.stl"
+link17 = "https://cdn.thingiverse.com/assets/2c/8a/f2/8e/45/pump_lid.stl"
+link18 = "https://cdn.thingiverse.com/assets/33/02/96/d8/bc/pump_impeller_3_blade.stl"
+link19 = "https://cdn.thingiverse.com/assets/f6/17/92/e8/70/auger_v1.stl"
+link20 = "https://cdn.thingiverse.com/assets/1f/57/66/92/9d/Base.stl"
+link21 = "https://www.thingiverse.com/download:7315529"
 
 puts "creating products..."
-
 product1 = Product.create(name: "Can opener", description: "open cans easily", file3d: link1)
 product2 = Product.create(name: "Beer Crate Battery Holder", description: "to store your batteries", file3d: link2)
 product3 = Product.create(name: "Disk Rack Roller", description: "replacement of upper disk", file3d: link3)
@@ -96,13 +101,13 @@ product11 = Product.create(name: "Big Gears", description: "These cogs are meant
 product12 = Product.create(name: "Razor holder", description: "Useful to store your disposable razor. ", file3d: link12)
 product13 = Product.create(name: "Spaghetti portioner", description: "Simple design of a spaghetti measuring tool. ", file3d: link13)
 product14 = Product.create(name: "Japanese Lantern", description: "Panels have thin transparent back rather than using the Tea Light Cover", file3d: link14)
-product15 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product16 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product17 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product18 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product19 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product20 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product21 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product15 = Product.create(name: "Motor Pump", description: "Small motor pump", file3d: link15)
+product16 = Product.create(name: "Centrifugal Water Pump", description: "To create vortex bois", file3d: link16)
+product17 = Product.create(name: "CD-ROM Motor Pump", description: "To repair old CD readers", file3d: link17)
+product18 = Product.create(name: "Micro water pump", description: "This is a small side project for my combat boat 90", file3d: link18)
+product19 = Product.create(name: "Marble Pump", description: "Marble Pump to build a Hubelino Marble Machine ", file3d: link19)
+product20 = Product.create(name: "Turbo Pump", description: "Turbo Pump with garden hose fittings", file3d: link20)
+product21 = Product.create(name: "Soap Dispenser", description: "To dispense soap DUH !", file3d: link21)
 
 puts "Products Created !"
 
@@ -231,6 +236,16 @@ file8 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/
 file9 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Fishing_Rod_pteoxv.jpg')
 file0 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
 file11 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655978195/card_preview_20200701_103753_r5c1lp.jpg')
+file12 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655979025/card_preview_With_razors_qcubna.png')
+file13 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655979181/card_preview_IMG_20220524_133209_bhkjrn.jpg')
+file14 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655979494/card_preview_IMG_7249_dknrth.jpg')
+file15 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655979977/DSC03205_display_large_preview_card_tm4qh7.jpg')
+file16 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655980251/20140628_221258_preview_card_ruiye1.jpg')
+file17 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655980516/pump_preview_card_ax7gpa.jpg')
+file18 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655980878/c8bc84ceeb1472f816238b9e0b379709_preview_card_xvx5nh.jpg')
+file19 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655981111/1ddaa470af9aa0c88de33f88e3ce52db_preview_card_ozppm8.jpg')
+file20 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655981430/c2329b7837badefad98439513e5375ba_preview_card_yhym80.jpg')
+file21 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655981632/card_preview_20190808_192540481_iOS_avkfql.jpg')
 
 # attached photo
 product1.photo.attach(io: file1, filename: 'Pocket_catapult_azgfa5', content_type: 'image/jpg')
@@ -243,6 +258,17 @@ product7.photo.attach(io: file7, filename: 'Homer_sponge_holder_vxj8t1', content
 product8.photo.attach(io: file8, filename: 'Pocket_catapult_azgfa5', content_type: 'image/png')
 product9.photo.attach(io: file9, filename: 'Fishing_Rod_pteoxv', content_type: 'image/jpg')
 product0.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product11.photo.attach(io: file11, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product12.photo.attach(io: file12, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product13.photo.attach(io: file13, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product14.photo.attach(io: file14, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product15.photo.attach(io: file15, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product16.photo.attach(io: file16, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product17.photo.attach(io: file17, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product18.photo.attach(io: file18, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product19.photo.attach(io: file19, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product20.photo.attach(io: file20, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product21.photo.attach(io: file21, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
 
 user_pic1 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655891928/print3d/nicolas_l8hk0y.jpg')
 user_pic2 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655889461/print3d/griffin_lwgesx.jpg')
