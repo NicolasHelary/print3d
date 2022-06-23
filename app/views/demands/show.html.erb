@@ -17,6 +17,21 @@
   </div>
 </div>
 
+
+
+<% if current_user.id == @demand.client_id %>
+  <div class="btn-delete-demand  demands-access-btn">
+    <%= link_to "Delete demand",
+                  product_delete_demand_path(@demand.product.id, @demand),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" },
+                  class: "btn create" %>
+  </div>
+<% else %>
 <div class="btnMakeOffer">
   <%= link_to "Make an offer", new_demand_offer_path(@demand), class:"create"%>
 </div>
+<% end %>
+<br>
+<br>
+<br>
