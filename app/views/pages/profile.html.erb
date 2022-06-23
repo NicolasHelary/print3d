@@ -18,7 +18,7 @@
       <span><%= current_user.first_name.upcase %></span>
       <span><%= current_user.last_name.upcase %></span>
     <div class="user-infos">
-      <span> Specialty : video </span>
+      <span> <%= current_user.bio %> </span>
     </div>
     </div>
     <div class="buttons-wrapper">
@@ -32,46 +32,65 @@
   </div>
 
   <div class="edit-user">
-    <%= link_to "Edit your Password", edit_user_registration_path, class: "create" %>
+    <%= link_to "Edit profile", edit_user_registration_path, class: "create" %>
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "create" %>
   </div>
 
-  <h2>You have <%= current_user.demands_as_client.count %> demand<%=(current_user.demands_as_client.count <= 1 ? '' : 's')%> :</h2>
-  <div class="demands-wrapper">
-      <% current_user.demands_as_client.each do |demand| %>
-        <%= link_to demand_path(demand), :action => 'go' do %>
-          <div class="demand-card">
-            <div class="demand-infos">
-              <p><strong>Name : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
-              <p><strong>Price : </strong><%= demand.proposed_price %> €</p>
-              <p><strong>Date de publication :</strong><%=demand.publication_date.to_i%></p>
-            </div>
-            <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
-          </div>
-        <% end %>
-      <% end %>
-  </div>
+  <div class="profile-demand-offer">
+    <h3 >Your <%= current_user.demands_as_client.count <= 1 ? '' : current_user.demands_as_client.count %> last demand<%=(current_user.demands_as_client.count <= 1 ? '' : 's')%> :</h3>
 
-  <h2>You have <%= current_user.offers_as_printer.count %> offer<%=(current_user.offers_as_printer.count <= 1 ? '' : 's')%> :</h2>
-  <div class="offers-wrapper">
-      <% current_user.offers_as_printer.each do |offer| %></p>
-          <div class="offer-card">
-          <div class="offer-infos">
-          <p><strong>Name : </strong><%= offer.demand.client.first_name %> <%= offer.demand.client.last_name %></p>
-          <p><strong>Price : </strong><%= offer.price %> €</p>
-            <% if offer.status == 1 %>
-              <p><strong>Status :</strong> Pending</p>
-            <% elsif offer.status == 2 %>
-              <p><strong>Status :</strong> Accepted</p>
-            <% else %>
-              <p><strong>Status :</strong> Rejected</p>
+    <% if current_user.demands_as_client.count < 1 %>
+      <span> You don't have any demands to print yet. <br> Check the available products <br> <a href="/" style="text-decoration: none;" class="btn create" id="btn-here">Products</a></span>
+    <% else %>
+      <span>You have <%= current_user.demands_as_client.count %> demand<%=(current_user.demands_as_client.count <= 1 ? '' : 's')%> :</span>
+      <div class="demands-wrapper">
+          <% current_user.demands_as_client.each do |demand| %>
+            <%= link_to demand_path(demand), :action => 'go' do %>
+              <div class="demand-card">
+                <div class="demand-infos">
+                  <p><strong>Client : </strong><%= current_user.first_name %> <%= current_user.last_name %></p>
+                  <p><strong>Price offered : </strong><%= demand.proposed_price %> €</p>
+                  <p><strong>Publication date : </strong><%=demand.created_at.to_time.strftime('%B %e at %l:%M')%></p>
+                </div>
+                <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
+              </div>
             <% end %>
-          </div>
-          <%= cl_image_tag offer.demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
-          </div>
-      <% end %>
-  </div>
+          <% end %>
+      </div>
+    <% end %>
+
+  <br>
+
+
+    <h3>Your <%= current_user.offers_as_printer.count <= 1 ? '' : current_user.offers_as_printer.count %> last offer<%=(current_user.offers_as_printer.count <= 1 ? '' : 's')%> :</h3>
+
+    <% if current_user.offers_as_printer.count < 1 && current_user.printer == false %>
+      <span> You don't have any offers <br> Become a printer !</span>
+    <% elsif current_user.offers_as_printer.count < 1 && current_user.printer == true %>
+      <span> You don't have any offers yet. <br> You want to make money ? <br> Go check all demands ! <br> <a href="/demands" style="text-decoration: none;" class="btn create" id="btn-here">Demands</a></span>
+    <% else %>
+    <span>You have <%= current_user.offers_as_printer.count %> offer<%=(current_user.offers_as_printer.count <= 1 ? '' : 's')%> :</span>
+    <div class="offers-wrapper">
+        <% current_user.offers_as_printer.each do |offer| %></p>
+            <div class="offer-card">
+            <div class="offer-infos">
+            <p><strong>Name : </strong><%= offer.demand.client.first_name %> <%= offer.demand.client.last_name %></p>
+            <p><strong>Price : </strong><%= offer.price %> €</p>
+              <% if offer.status == 1 %>
+                <p><strong>Status :</strong> Pending</p>
+              <% elsif offer.status == 2 %>
+                <p><strong>Status :</strong> Accepted</p>
+              <% else %>
+                <p><strong>Status :</strong> Rejected</p>
+              <% end %>
+            </div>
+            <%= cl_image_tag offer.demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
+            </div>
+        <% end %>
+    </div>
+    <% end %>
   <%# <h2>Your offers accepted by Users :</h2> %>
+  </div>
 </div>
 <br>
 <br>
