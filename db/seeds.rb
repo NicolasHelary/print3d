@@ -15,7 +15,7 @@ Offer.destroy_all
 Product.destroy_all
 User.destroy_all
 
-bio1 = "I like smooth designs for aquarium pumps dude"
+bio1 = "I love fish breeding and I also have a small 3D printer"
 bio2 = "I love small tools for everyday's life"
 bio3 = "I need spare parts for my car project"
 bio4 = "I will be the very best, like no one ever was...Gonna catch them all !"
@@ -46,7 +46,7 @@ user5 = User.create(first_name: "Jean-Loup", email: "Jeanloup@TAdev.fr", address
 
 user6 = User.create(first_name: "John", email: "john@gmail.com", address: "590 avenue du Prado, Marseille", bio: bio6, last_name: "Six", printer: false, password: "azerty")
 user7 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "50 rue de lodi, Marseille", bio: bio7, last_name: "Seven", printer: true, password: "azerty")
-user8 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "158 Bd Paul Cézanne, Gardanne", bio: bio8, last_name: "Eight", printer: false, password: "azerty")
+user8 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "10 rue du docteur Jean Fiolle, Marseille", bio: bio8, last_name: "Eight", printer: false, password: "azerty")
 user9 = User.create(first_name: "Mike", email: "mike@gmail.com", address: "21 rue Haxo, Marseille", bio: bio9, last_name: "Nine", printer: false, password: "azerty")
 user10 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "16 place Victor Hugo, Marseille", bio: bio0, last_name: "Ten", printer: false, password: "azerty")
 
@@ -97,7 +97,7 @@ product7 = Product.create(name: "Homer sponge holder", description: "memest spon
 product8 = Product.create(name: "Pocket catapult", description: "to lauch siege from your pocket", file3d: link8)
 product9 = Product.create(name: "Fishing Rod", description: "Fully Printable Fishing Rod", file3d: link9)
 product0 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
-product11 = Product.create(name: "Eheim pump gears", description: "These cogs are meant for decorative custom cog work", file3d: link11)
+product11 = Product.create(name: "Eheim pump gears", description: "Replacement gears for Eheim professional 4+ filtration pump", file3d: link11)
 product12 = Product.create(name: "Razor holder", description: "Useful to store your disposable razor. ", file3d: link12)
 product13 = Product.create(name: "Spaghetti portioner", description: "Simple design of a spaghetti measuring tool. ", file3d: link13)
 product14 = Product.create(name: "Japanese Lantern", description: "Panels have thin transparent back rather than using the Tea Light Cover", file3d: link14)
@@ -205,6 +205,14 @@ offer8 = Offer.create(price: 15.00, status: 1, client_score: 2, printer_score: 3
 offer9 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 4, demand_id: demand16.id, printer_id: user18.id)
 offer10 = Offer.create(price: 15.00, status: 1, client_score: 1, printer_score: 5, demand_id: demand20.id, printer_id: user17.id)
 offer11 = Offer.create(price: 15.00, status: 1, client_score: 4, printer_score: 3, demand_id: demand20.id, printer_id: user21.id)
+
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 4, printer_score: 2, demand_id: demand2.id, printer_id: user4.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 4, printer_score: 1, demand_id: demand12.id, printer_id: user14.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 3, demand_id: demand11.id, printer_id: user20.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 2, printer_score: 4, demand_id: demand3.id, printer_id: user21.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 4, printer_score: 3, demand_id: demand7.id, printer_id: user17.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 3, printer_score: 4, demand_id: demand5.id, printer_id: user9.id)
+offer11 = Offer.create(price: 15.00, status: 1, client_score: 3, printer_score: 5, demand_id: demand21.id, printer_id: user8.id)
 puts "Offers Created !"
 
 # require "open-uri"
