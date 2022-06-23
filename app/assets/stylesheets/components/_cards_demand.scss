@@ -55,6 +55,7 @@
   font-size: 16px;
   font-weight: lighter;
   margin: 0;
+  margin-bottom: 3vh;
 }
 
 .card-index-demand .card-index-infos {
@@ -74,4 +75,8 @@
 .cards-demand a {
   text-decoration: none;
   color: white;
+}
+
+.fa-star {
+  font-size: 12px;
 }
