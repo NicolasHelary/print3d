@@ -3,13 +3,13 @@ class DemandsController < ApplicationController
   before_action :set_demand, only: [:show, :edit, :update, :destroy]
 
   def index
-    @demands = Demand.all
+    @demands = Demand.all.reverse
 
-    @users_demand = @demands.map do |demand|
+    clients = @demands.map do |demand|
       demand.client
     end
 
-    @demands_markers = @users_demand.map do |user_demand|
+    @demands_markers = clients.map do |user_demand|
       {
         lat: user_demand.latitude,
         lng: user_demand.longitude,

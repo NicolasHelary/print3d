@@ -189,6 +189,7 @@ demand47 = Demand.create(proposed_price: 34.50, client_id: user18.id, product_id
 demand48 = Demand.create(proposed_price: 16.00, client_id: user6.id, product_id: product7.id, comment: "want this !!!")
 demand49 = Demand.create(proposed_price: 13.00, client_id: user10.id, product_id: product8.id, comment: "I need it in white pls")
 demand50 = Demand.create(proposed_price: 12.00, client_id: user10.id, product_id: product9.id, comment: "No comment")
+
 puts "Demands Created !"
 
 puts "Creating Offers..."
@@ -258,13 +259,13 @@ product7.photo.attach(io: file7, filename: 'Homer_sponge_holder_vxj8t1', content
 product8.photo.attach(io: file8, filename: 'Pocket_catapult_azgfa5', content_type: 'image/png')
 product9.photo.attach(io: file9, filename: 'Fishing_Rod_pteoxv', content_type: 'image/jpg')
 product0.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
-product11.photo.attach(io: file11, filename: 'card_preview_20200701', content_type: 'image/jpg')
-product12.photo.attach(io: file12, filename: 'card_preview_With_razors', content_type: 'image/jpg')
-product13.photo.attach(io: file13, filename: 'card_preview_IMG_20220524', content_type: 'image/jpg')
-product14.photo.attach(io: file14, filename: 'card_preview_IMG_7249', content_type: 'image/jpg')
-product15.photo.attach(io: file15, filename: 'DSC03205_display_large', content_type: 'image/jpg')
+product11.photo.attach(io: file11, filename: 'Card_preview_20200701', content_type: 'image/jpg')
+product12.photo.attach(io: file12, filename: 'Card_preview_With_razors', content_type: 'image/png')
+product13.photo.attach(io: file13, filename: 'Card_preview_IMG_20220524', content_type: 'image/jpg')
+product14.photo.attach(io: file14, filename: 'Card_preview_IMG_7249', content_type: 'image/jpg')
+product15.photo.attach(io: file15, filename: 'DSC03205_display', content_type: 'image/jpg')
 product16.photo.attach(io: file16, filename: '20140628_221258_preview', content_type: 'image/jpg')
-product17.photo.attach(io: file17, filename: 'pump_preview_card', content_type: 'image/jpg')
+product17.photo.attach(io: file17, filename: 'Pump_preview_card', content_type: 'image/jpg')
 product18.photo.attach(io: file18, filename: 'c8bc84ceeb1472f816238b9e0b379709', content_type: 'image/jpg')
 product19.photo.attach(io: file19, filename: '1ddaa470af9aa0c88de33f88e3ce52db', content_type: 'image/jpg')
 product20.photo.attach(io: file20, filename: 'c2329b7837badefad98439513e5375ba', content_type: 'image/jpg')

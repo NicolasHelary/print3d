@@ -42,7 +42,7 @@
     <% if current_user.demands_as_client.count < 1 %>
       <span> You don't have any demands to print yet. <br> Check the available products <br> <a href="/" style="text-decoration: none;" class="btn create" id="btn-here">Products</a></span>
     <% else %>
-      <span>You have <%= current_user.demands_as_client.count %> demand<%=(current_user.demands_as_client.count <= 1 ? '' : 's')%> :</span>
+      <p>You have <%= current_user.demands_as_client.count %> demand<%=(current_user.demands_as_client.count <= 1 ? '' : 's')%> :</p>
       <div class="demands-wrapper">
           <% current_user.demands_as_client.each do |demand| %>
             <%= link_to demand_path(demand), :action => 'go' do %>
@@ -58,8 +58,6 @@
           <% end %>
       </div>
     <% end %>
-
-  <br>
 
 
     <h3>Your <%= current_user.offers_as_printer.count <= 1 ? '' : current_user.offers_as_printer.count %> last offer<%=(current_user.offers_as_printer.count <= 1 ? '' : 's')%> :</h3>
@@ -92,5 +90,6 @@
   <%# <h2>Your offers accepted by Users :</h2> %>
   </div>
 </div>
+<br>
 <br>
 <br>
