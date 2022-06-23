@@ -15,31 +15,53 @@ Offer.destroy_all
 Product.destroy_all
 User.destroy_all
 
+bio1 = "I like smooth designs for aquarium pumps dude"
+bio2 = "I love small tools for everyday's life"
+bio3 = "I need spare parts for my car project"
+bio4 = "I will be the very best, like no one ever was...Gonna catch them all !"
+bio5 = "I usually need small figurines for my tabletop games"
+bio6 = "I need a lot of connectors for my job"
+bio7 = "My company sells plastic supports for laptop and smartphones"
+bio8 = "I need customized shapes of clocks"
+bio9 = "I only accept offers that match my demand price."
+bio0 = "My garden needs some tweaks : lanterns, handles, gnomes !"
+bio11 = "Firearm models lover, Yeepie ki yay motherprinter !"
+bio12 = "I need custom light switches for an haunted house"
+bio13 = "I am an handyman and I want to enhance my paint and tools holder"
+bio14 = "Architect, needs some models for the flats I've designed"
+bio15 = "I want to create customized toys for my children"
+bio16 = "Fan of StarWars period."
+bio17 = "Needs some custom baskets for my grocery store"
+bio18 = "Designer in a famous car company, I need models"
+bio19 = "Just here for various items, from heaphone stands to tealight holders."
+bio20 = "I need 2oz cups in large quantities, available in chat"
+bio21 = "I'm a magician and I need to create custom props items"
+
 puts "Creating Users..."
-user1 = User.create(first_name: "Nico", email: "nico@leaddev.fr", address: "17 rue Sainte, Marseille", last_name: "One", printer: true, password: "azerty")
-user2 = User.create(first_name: "Tojo", email: "tojo@dev.fr", address: "66 rue d'Aubagne, Marseille", last_name: "Two", printer: false, password: "azerty")
-user3 = User.create(first_name: "Romu", email: "romualdo@dev.fr", address: "23 rue de la République, Marseille", last_name: "Three", printer: true, password: "azerty")
-user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "3 rue des Catalans, Marseille", last_name: "Four", printer: false, password: "azerty")
-user5 = User.create(first_name: "Jean-Loup", email: "Jeanloup@TAdev.fr", address: "10 rue Pascal, Marseille", last_name: "Five", printer: false, password: "azerty")
+user1 = User.create(first_name: "Nico", email: "nico@leaddev.fr", address: "17 rue Sainte, Marseille", last_name: "One", bio: bio1, printer: true, password: "azerty")
+user2 = User.create(first_name: "Tojo", email: "tojo@dev.fr", address: "66 rue d'Aubagne, Marseille", last_name: "Two", bio: bio2, printer: false, password: "azerty")
+user3 = User.create(first_name: "Romu", email: "romualdo@dev.fr", address: "23 rue de la République, Marseille", bio: bio3, last_name: "Three", printer: true, password: "azerty")
+user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "3 rue des Catalans, Marseille", bio: bio4, last_name: "Four", printer: false, password: "azerty")
+user5 = User.create(first_name: "Jean-Loup", email: "Jeanloup@TAdev.fr", address: "10 rue Pascal, Marseille", bio: bio5, last_name: "Five", printer: false, password: "azerty")
 
-user6 = User.create(first_name: "John", email: "john@gmail.com", address: "590 avenue du Prado, Marseille", last_name: "Six", printer: false, password: "azerty")
-user7 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "29 rue de Peypagan, Aubagne", last_name: "Seven", printer: true, password: "azerty")
-user8 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "158 Bd Paul Cézanne, Gardanne", last_name: "Eight", printer: false, password: "azerty")
-user9 = User.create(first_name: "Mike", email: "mike@gmail.com", address: "13 Cr Mirabeau, 13100 Aix-en-Provence", last_name: "Nine", printer: false, password: "azerty")
-user10 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "16 place Victor Hugo, Marseille", last_name: "Ten", printer: false, password: "azerty")
+user6 = User.create(first_name: "John", email: "john@gmail.com", address: "590 avenue du Prado, Marseille", bio: bio6, last_name: "Six", printer: false, password: "azerty")
+user7 = User.create(first_name: "Steve", email: "steve@gmail.com", address: "29 rue de Peypagan, Aubagne", bio: bio7, last_name: "Seven", printer: true, password: "azerty")
+user8 = User.create(first_name: "Elon", email: "elonp@gmail.com", address: "158 Bd Paul Cézanne, Gardanne", bio: bio8, last_name: "Eight", printer: false, password: "azerty")
+user9 = User.create(first_name: "Mike", email: "mike@gmail.com", address: "21 rue Haxo, Marseille", bio: bio9, last_name: "Nine", printer: false, password: "azerty")
+user10 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "16 place Victor Hugo, Marseille", bio: bio0, last_name: "Ten", printer: false, password: "azerty")
 
-user11 = User.create(first_name: "Stan", email: "stan@gmail.com", address: "2 rue Lafon, Marseille", last_name: "Smith", printer: false, password: "azerty")
-user12 = User.create(first_name: "Kevin", email: "kevin@gmail.com", address: "22 rue Paradis, Marseille", last_name: "Dupont", printer: false, password: "azerty")
-user13 = User.create(first_name: "Renée", email: "renee@gmail.com", address: "3 rue Rodolphe Pollak, Marseille", last_name: "Dupont", printer: false, password: "azerty")
-user14 = User.create(first_name: "Martin", email: "martin@gmail.com", address: "17 rue Barbaroux, Marseille", last_name: "Martin", printer: false, password: "azerty")
-user15 = User.create(first_name: "Michelle", email: "michelle@gmail.com", address: "72 rue François Moisson, Marseille", last_name: "Philippe", printer: false, password: "azerty")
+user11 = User.create(first_name: "Stan", email: "stan@gmail.com", address: "2 rue Lafon, Marseille", bio: bio11, last_name: "Smith", printer: false, password: "azerty")
+user12 = User.create(first_name: "Kevin", email: "kevin@gmail.com", address: "22 rue Paradis, Marseille", bio: bio12, last_name: "Dupont", printer: false, password: "azerty")
+user13 = User.create(first_name: "Renée", email: "renee@gmail.com", address: "3 rue Rodolphe Pollak, Marseille", bio: bio13,last_name: "Dupont", printer: false, password: "azerty")
+user14 = User.create(first_name: "Martin", email: "martin@gmail.com", address: "17 rue Barbaroux, Marseille", bio: bio14, last_name: "Martin", printer: false, password: "azerty")
+user15 = User.create(first_name: "Michelle", email: "michelle@gmail.com", address: "72 rue François Moisson, Marseille", bio: bio15, last_name: "Philippe", printer: false, password: "azerty")
 
-user16 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "73 chemin du Roucas Blanc, Marseille", last_name: "Ticolis", printer: false, password: "azerty")
-user17 = User.create(first_name: "Jean", email: "jean@gmail.com", address: "9 rue des Flots Bleus, Marseille", last_name: "Li", printer: false, password: "azerty")
-user18 = User.create(first_name: "Alain", email: "alainproviste@gmail.com", address: "161 rue du Commandant Rolland Marseille", last_name: "Proviste", printer: false, password: "azerty")
-user19 = User.create(first_name: "Alain", email: "alainprost@gmail.com", address: "28 Boulevard Barral, Marseille", last_name: "Prost", printer: false, password: "azerty")
-user20 = User.create(first_name: "Philippe", email: "philippe@gmail.com", address: "48 rue Auguste Blanqui, Marseille", last_name: "Katerine", printer: false, password: "azerty")
-user21 = User.create(first_name: "Mimi", email: "mimi@gmail.com", address: "17 Boulevard Cassini, Marseille", last_name: "Mathy", printer: false, password: "azerty")
+user16 = User.create(first_name: "Hector", email: "hector@gmail.com", address: "73 chemin du Roucas Blanc, Marseille", bio: bio16, last_name: "Ticolis", printer: false, password: "azerty")
+user17 = User.create(first_name: "Jean", email: "jean@gmail.com", address: "9 rue des Flots Bleus, Marseille", bio: bio17, last_name: "Li", printer: false, password: "azerty")
+user18 = User.create(first_name: "Alain", email: "alainproviste@gmail.com", address: "161 rue du Commandant Rolland Marseille", bio: bio18, last_name: "Proviste", printer: false, password: "azerty")
+user19 = User.create(first_name: "Alain", email: "alainprost@gmail.com", address: "28 Boulevard Barral, Marseille", bio: bio19, last_name: "Prost", printer: false, password: "azerty")
+user20 = User.create(first_name: "Philippe", email: "philippe@gmail.com", address: "48 rue Auguste Blanqui, Marseille", bio: bio20, last_name: "Katerine", printer: false, password: "azerty")
+user21 = User.create(first_name: "Mimi", email: "mimi@gmail.com", address: "17 Boulevard Cassini, Marseille", bio: bio21, last_name: "Mathy", printer: false, password: "azerty")
 puts "Users created !"
 
 link1 = "https://cdn.thingiverse.com/assets/6b/8c/69/44/3a/CanLidOpenerLid.stl"
@@ -52,6 +74,11 @@ link7 = "https://cdn.thingiverse.com/assets/57/13/25/ec/71/Sponge_holder.stl"
 link8 = "https://cdn.thingiverse.com/assets/fa/1b/a2/b7/b1/Full_set_Catapult.stl"
 link9 = "https://cdn.thingiverse.com/assets/c8/05/ff/16/6c/Frame.stl"
 link10 = "https://cdn.thingiverse.com/assets/f7/e5/56/14/08/12PlugCover.stl"
+link11 = "https://cdn.thingiverse.com/assets/e2/62/ab/bc/46/card_preview_20200701_103753.jpg"
+link12 = "https://cdn.thingiverse.com/assets/28/33/b6/b7/6c/card_preview_With_razors.PNG"
+link13 = "https://cdn.thingiverse.com/assets/a6/b1/01/32/9c/card_preview_IMG_20220524_133209.jpg"
+link14 = "https://cdn.thingiverse.com/assets/d7/58/25/91/b5/card_preview_IMG_7249.jpg"
+link15 =
 
 puts "creating products..."
 
@@ -65,6 +92,17 @@ product7 = Product.create(name: "Homer sponge holder", description: "memest spon
 product8 = Product.create(name: "Pocket catapult", description: "to lauch siege from your pocket", file3d: link8)
 product9 = Product.create(name: "Fishing Rod", description: "Fully Printable Fishing Rod", file3d: link9)
 product0 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product11 = Product.create(name: "Big Gears", description: "These cogs are meant for decorative custom cog work", file3d: link11)
+product12 = Product.create(name: "Razor holder", description: "Useful to store your disposable razor. ", file3d: link12)
+product13 = Product.create(name: "Spaghetti portioner", description: "Simple design of a spaghetti measuring tool. ", file3d: link13)
+product14 = Product.create(name: "Japanese Lantern", description: "Panels have thin transparent back rather than using the Tea Light Cover", file3d: link14)
+product15 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product16 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product17 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product18 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product19 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product20 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
+product21 = Product.create(name: "Protect earplug", description: "Stop unraveling the wires", file3d: link10)
 
 puts "Products Created !"
 
@@ -100,91 +138,60 @@ demand1 = Demand.create(proposed_price: 15.00, client_id: user2.id, product_id: 
 demand2 = Demand.create(proposed_price: 10.00, client_id: user2.id, product_id: product2.id, comment: "No comment")
 demand3 = Demand.create(proposed_price: 9.99, client_id: user2.id, product_id: product3.id, comment: "No comment")
 demand4 = Demand.create(proposed_price: 2.00, client_id: user4.id, product_id: product4.id, comment: "No comment")
-demand5 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand6 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand7 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand8 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand9 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand10 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand11 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand12 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand13 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand14 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand15 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand16 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand17 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand18 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand19 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand20 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand21 = Demand.create(proposed_price: 300.15, client_id: user13.id, product_id: product5.id, comment: "No comment")
-demand22 = Demand.create(proposed_price: 300.15, client_id: user19.id, product_id: product5.id, comment: "No comment")
-demand23 = Demand.create(proposed_price: 300.15, client_id: user19.id, product_id: product5.id, comment: "No comment")
-demand24 = Demand.create(proposed_price: 300.15, client_id: user19.id, product_id: product5.id, comment: "No comment")
-demand25 = Demand.create(proposed_price: 300.15, client_id: user10.id, product_id: product5.id, comment: "No comment")
-demand26 = Demand.create(proposed_price: 300.15, client_id: user10.id, product_id: product5.id, comment: "No comment")
-demand27 = Demand.create(proposed_price: 300.15, client_id: user16.id, product_id: product5.id, comment: "No comment")
-demand28 = Demand.create(proposed_price: 300.15, client_id: user16.id, product_id: product5.id, comment: "No comment")
-demand29 = Demand.create(proposed_price: 300.15, client_id: user16.id, product_id: product5.id, comment: "No comment")
-demand30 = Demand.create(proposed_price: 300.15, client_id: user10.id, product_id: product5.id, comment: "No comment")
-demand31 = Demand.create(proposed_price: 300.15, client_id: user10.id, product_id: product5.id, comment: "No comment")
-demand32 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand33 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand34 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand35 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand36 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand37 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand38 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand39 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand40 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand41 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand42 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand43 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand44 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand45 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand46 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand47 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand48 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand49 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
-demand50 = Demand.create(proposed_price: 300.15, client_id: user4.id, product_id: product5.id, comment: "No comment")
+demand5 = Demand.create(proposed_price: 23.00, client_id: user6.id, product_id: product5.id, comment: "No comment")
+demand6 = Demand.create(proposed_price: 11.00, client_id: user6.id, product_id: product5.id, comment: "No comment")
+demand7 = Demand.create(proposed_price: 11.00, client_id: user6.id, product_id: product5.id, comment: "No comment")
+demand8 = Demand.create(proposed_price: 12.00, client_id: user8.id, product_id: product5.id, comment: "No comment")
+demand9 = Demand.create(proposed_price: 18.00, client_id: user8.id, product_id: product5.id, comment: "No comment")
+demand10 = Demand.create(proposed_price: 10.00, client_id: user8.id, product_id: product5.id, comment: "No comment")
+demand11 = Demand.create(proposed_price: 8.00, client_id: user9.id, product_id: product5.id, comment: "No comment")
+demand12 = Demand.create(proposed_price: 15.50, client_id: user10.id, product_id: product5.id, comment: "No comment")
+demand13 = Demand.create(proposed_price: 17.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand14 = Demand.create(proposed_price: 13.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand15 = Demand.create(proposed_price: 31.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand16 = Demand.create(proposed_price: 13.50, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand17 = Demand.create(proposed_price: 16.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand18 = Demand.create(proposed_price: 26.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand19 = Demand.create(proposed_price: 27.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand20 = Demand.create(proposed_price: 29.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand21 = Demand.create(proposed_price: 21.00, client_id: user13.id, product_id: product5.id, comment: "No comment")
+demand22 = Demand.create(proposed_price: 26.00, client_id: user19.id, product_id: product5.id, comment: "No comment")
+demand23 = Demand.create(proposed_price: 22.00, client_id: user19.id, product_id: product5.id, comment: "No comment")
+demand24 = Demand.create(proposed_price: 23.00, client_id: user19.id, product_id: product5.id, comment: "No comment")
+demand25 = Demand.create(proposed_price: 8.00, client_id: user12.id, product_id: product5.id, comment: "No comment")
+demand26 = Demand.create(proposed_price: 7.30, client_id: user12.id, product_id: product5.id, comment: "No comment")
+demand27 = Demand.create(proposed_price: 5.20, client_id: user16.id, product_id: product5.id, comment: "No comment")
+demand28 = Demand.create(proposed_price: 11.00, client_id: user16.id, product_id: product5.id, comment: "No comment")
+demand29 = Demand.create(proposed_price: 9.50, client_id: user16.id, product_id: product5.id, comment: "No comment")
+demand30 = Demand.create(proposed_price: 8.99, client_id: user11.id, product_id: product5.id, comment: "No comment")
+demand31 = Demand.create(proposed_price: 12.70, client_id: user11.id, product_id: product5.id, comment: "No comment")
+demand32 = Demand.create(proposed_price: 17.70, client_id: user14.id, product_id: product5.id, comment: "No comment")
+demand33 = Demand.create(proposed_price: 6.30, client_id: user17.id, product_id: product5.id, comment: "No comment")
+demand34 = Demand.create(proposed_price: 8.00, client_id: user21.id, product_id: product5.id, comment: "No comment")
+demand35 = Demand.create(proposed_price: 8.60, client_id: user14.id, product_id: product5.id, comment: "No comment")
+demand36 = Demand.create(proposed_price: 23.20, client_id: user14.id, product_id: product5.id, comment: "No comment")
+demand37 = Demand.create(proposed_price: 21.50, client_id: user14.id, product_id: product5.id, comment: "No comment")
+demand38 = Demand.create(proposed_price: 23.00, client_id: user15.id, product_id: product5.id, comment: "No comment")
+demand39 = Demand.create(proposed_price: 14.60, client_id: user15.id, product_id: product5.id, comment: "No comment")
+demand40 = Demand.create(proposed_price: 18.90, client_id: user18.id, product_id: product5.id, comment: "No comment")
+demand41 = Demand.create(proposed_price: 31.00, client_id: user18.id, product_id: product5.id, comment: "No comment")
+demand42 = Demand.create(proposed_price: 33.90, client_id: user20.id, product_id: product5.id, comment: "No comment")
+demand43 = Demand.create(proposed_price: 15.60, client_id: user20.id, product_id: product5.id, comment: "No comment")
+demand44 = Demand.create(proposed_price: 19.00, client_id: user17.id, product_id: product5.id, comment: "No comment")
+demand45 = Demand.create(proposed_price: 26.30, client_id: user21.id, product_id: product5.id, comment: "No comment")
+demand46 = Demand.create(proposed_price: 28.70, client_id: user12.id, product_id: product5.id, comment: "No comment")
+demand47 = Demand.create(proposed_price: 34.50, client_id: user18.id, product_id: product5.id, comment: "No comment")
+demand48 = Demand.create(proposed_price: 16.00, client_id: user6.id, product_id: product5.id, comment: "No comment")
+demand49 = Demand.create(proposed_price: 13.00, client_id: user10.id, product_id: product5.id, comment: "No comment")
+demand50 = Demand.create(proposed_price: 12.00, client_id: user10.id, product_id: product5.id, comment: "No comment")
 puts "Demands Created !"
 
 puts "Creating Offers..."
 offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer1 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
 offer2 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
 offer3 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer4 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
-offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user3.id)
+offer4 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user7.id)
+offer5 = Offer.create(price: 15.00, status: 1, client_score: 5, printer_score: 5, demand_id: demand1.id, printer_id: user7.id)
 puts "Offers Created !"
 
 # require "open-uri"
@@ -223,6 +230,17 @@ file7 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/
 file8 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Pocket_catapult_azgfa5.jpg')
 file9 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Fishing_Rod_pteoxv.jpg')
 file0 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file11 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file12 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file13 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file14 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file15 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file16 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file17 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file18 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file19 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file20 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
+file21 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655826341/print3d/Protect_earplug_akfhzj.jpg')
 
 # attached photo
 product1.photo.attach(io: file1, filename: 'Pocket_catapult_azgfa5', content_type: 'image/jpg')
@@ -235,6 +253,17 @@ product7.photo.attach(io: file7, filename: 'Homer_sponge_holder_vxj8t1', content
 product8.photo.attach(io: file8, filename: 'Pocket_catapult_azgfa5', content_type: 'image/png')
 product9.photo.attach(io: file9, filename: 'Fishing_Rod_pteoxv', content_type: 'image/jpg')
 product0.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product11.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product12.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product13.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product14.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product15.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product16.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product17.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product18.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product19.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product20.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
+product21.photo.attach(io: file0, filename: 'Protect_earplug_akfhzj', content_type: 'image/jpg')
 
 user_pic1 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655891928/print3d/nicolas_l8hk0y.jpg')
 user_pic2 = URI.open('https://res.cloudinary.com/ddgdamfek/image/upload/v1655889461/print3d/griffin_lwgesx.jpg')
