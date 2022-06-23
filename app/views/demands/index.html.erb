@@ -21,7 +21,7 @@
     <% @demands.each do |demand| %>
       <%= link_to demand_path(demand), :action => 'go' do %>
         <div class="card-index-demand">
-            <%= image_tag"dyson.png"%>
+            <%= cl_image_tag demand.product.photo.key, class: "img-card-product", alt: "Product Pic" %>
             <div class="card-index-infos">
               <h3><%="#{demand.product.name}" %></h3>
               <p><%="by:  #{demand.client.first_name}" %></p>
