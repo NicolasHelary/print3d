@@ -8,6 +8,11 @@
   }
 }
 
+.card-offer h2 {
+  font-family: $headers-show;
+  text-align: center;
+}
+
 .cards-demand {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -74,4 +79,29 @@
 .cards-demand a {
   text-decoration: none;
   color: white;
+}
+
+.price-d-show {
+  padding-top: 8px;
+  font-size: initial;
+}
+
+.info-d-show {
+  margin-top: 4px;
+}
+
+.font-d-show {
+  font-family: $headers-show;
+}
+
+.comment-style {
+  font-style: italic;
+}
+
+.fa-quote-left {
+  margin-right: 4px;
+}
+
+.fa-quote-right {
+  margin-left: 6px;
 }

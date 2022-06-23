@@ -2,19 +2,18 @@
   <%= link_to image_tag(("Printed.png"), :class => "img-logo-printer"), root_path %>
 </div>
 <br>
-<h5 class="text-center">Your demand :</h5>
 <div class="card-offer">
 
   <div class="text-center mt-4">
     <%= cl_image_tag @demand.product.photo.key, class: "img-show", alt: "Product Pic" %>
   </div>
 
-  <div class="mt-4">
+  <div class="info-d-show">
     <h2><%= @demand.product.name %></h2>
-    <p><strong>Product description</strong> : <%= @demand.product.description %></p>
-    <p class="fw-light">Client: <%= @demand.client.first_name  %></p>
-    <p class="fw-light">Comment: <%= @demand.comment  %></p>
-    <p class="fw-bold">Client Price: <%= @demand.proposed_price  %> €</p>
+    <p><i class="fa-solid fa-arrow-right"></i> <i><%= @demand.product.description %></i></p>
+    <p class="font-d-show">By : <%= @demand.client.first_name  %></p>
+    <i class="fa-solid fa-quote-left fa-2xs"></i><i class="comment-style"><%= @demand.comment  %></i><i class="fa-solid fa-quote-right fa-2xs"></i>
+    <p class="price-d-show"><%= @demand.client.first_name %> proposed : <%= @demand.proposed_price  %> €</p>
   </div>
 </div>
 
