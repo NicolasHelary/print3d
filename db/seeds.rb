@@ -38,8 +38,8 @@ bio20 = "I need 2oz cups in large quantities, available in chat"
 bio21 = "I'm a magician and I need to create custom props items"
 
 puts "Creating Users..."
-user1 = User.create(first_name: "Nico", email: "nico@leaddev.fr", address: "17 rue Sainte, Marseille", last_name: "One", bio: bio1, printer: true, password: "azerty")
-user2 = User.create(first_name: "Tojo", email: "tojo@dev.fr", address: "66 rue d'Aubagne, Marseille", last_name: "Two", bio: bio2, printer: false, password: "azerty")
+user1 = User.create(first_name: "Nico", email: "nico@leaddev.fr", address: "17 rue Sainte, Marseille", last_name: "Nounet", bio: bio1, printer: true, password: "azerty")
+user2 = User.create(first_name: "Tojo", email: "tojo@dev.fr", address: "66 rue d'Aubagne, Marseille", last_name: "Martin", bio: bio2, printer: false, password: "azerty")
 user3 = User.create(first_name: "Romu", email: "romualdo@dev.fr", address: "23 rue de la République, Marseille", bio: bio3, last_name: "Three", printer: true, password: "azerty")
 user4 = User.create(first_name: "Bry", email: "bry@dev.fr", address: "3 rue des Catalans, Marseille", bio: bio4, last_name: "Four", printer: false, password: "azerty")
 user5 = User.create(first_name: "Jean-Loup", email: "Jeanloup@TAdev.fr", address: "10 rue Pascal, Marseille", bio: bio5, last_name: "Five", printer: false, password: "azerty")

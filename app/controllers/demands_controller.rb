@@ -64,7 +64,7 @@ class DemandsController < ApplicationController
   def destroy
     @product = Product.find(params[:product_id])
     @demand.destroy
-    redirect_to demands_path
+    redirect_to profile_path
   end
 
   private
