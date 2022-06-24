@@ -61,6 +61,10 @@
   font-size: small;
 }
 
+.demand-infos p {
+  color: #070d59;
+}
+
 .offer-infos {
   margin-right: 6px;
   padding-top: 12px;
@@ -152,7 +156,7 @@ h2 {
   margin-top: 6px;
   font-style: #000000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .edit-user a {
