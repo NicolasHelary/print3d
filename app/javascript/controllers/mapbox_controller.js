@@ -14,8 +14,10 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/outdoors-v11"
+      style: "mapbox://styles/mapbox/outdoors-v11",
+      projection: 'globe' // ajout pour map en globe
     })
+    map.setProjection('globe') // ajout pour map en globe pb: on n'a plus les markers
     this.#addMarkersToMap()
     this.#addPrintersMarkersToMap()
     this.#fitMapToMarkers()
